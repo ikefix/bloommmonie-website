@@ -5,6 +5,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Unicodeveloper\Paystack\Facades\Paystack;
 use App\Models\Subscription;
+use App\Models\Tenant;
+use App\Models\Shop;
+use Illuminate\Support\Str;
 
 class SubscriptionController extends Controller
 {
@@ -43,36 +46,27 @@ class SubscriptionController extends Controller
         ])->redirectNow();
     }
 
-
-
 public function handleGatewayCallback()
 {
-    $paymentDetails = Paystack::getPaymentData(); // Returns the payment data
+    $paymentDetails = Paystack::getPaymentData();
 
-    // Get metadata from payment details
     $metadata = $paymentDetails['data']['metadata'] ?? [];
     $userId = $metadata['user_id'] ?? null;
-    $plan = $metadata['plan'] ?? 'lite'; // default to 'lite' if not set
+    $plan = $metadata['plan'] ?? 'lite';
     $amount = $paymentDetails['data']['amount'] ?? 0;
     $reference = $paymentDetails['data']['reference'] ?? null;
 
-    // Get the user from DB instead of relying on session
     $user = \App\Models\User::find($userId);
 
     if (!$user) {
         return redirect()->route('register')->with('error', 'User not found.');
     }
 
-    // Determine subscription duration
+    // Subscription duration
     $endsAt = $plan === 'lite' ? now()->addMonth() : now()->addYear();
 
-    // Optional: update user's subscription plan info for quick access
-    $user->subscription_plan = $plan;
-    $user->subscription_expires_at = $endsAt;
-    $user->save();
-
-    // Save full subscription to subscriptions table
-    Subscription::create([
+    // Store subscription
+    \App\Models\Subscription::create([
         'user_id' => $user->id,
         'plan' => $plan,
         'amount' => $amount,
@@ -81,8 +75,22 @@ public function handleGatewayCallback()
         'ends_at' => $endsAt,
     ]);
 
-    return redirect()->route('login')->with('success', 'Payment successful. Please log in to continue.');
-}
+    // Generate unique subdomain (e.g., peter.posapp.com)
+    $subdomain = strtolower(explode('@', $user->email)[0]); // OR customize
+    $fullDomain = "{$subdomain}bloommonie.com";
 
+    // Store tenant
+    \App\Models\Tenant::create([
+        'user_id' => $user->id,
+        'domain' => $fullDomain,
+        'subscription_plan' => $plan,
+    ]);
+
+    // Optional: save current subdomain to session
+    session(['tenant_domain' => $fullDomain]);
+
+    // Redirect to tenant's subdomain
+    return redirect()->away("http://{$fullDomain}");
+}
 
 }
