@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Unicodeveloper\Paystack\Facades\Paystack;
@@ -8,6 +9,9 @@ use App\Models\Subscription;
 use App\Models\Tenant;
 use App\Models\Shop;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log; // make sure this is at the top
+use Exception;
+
 
 class SubscriptionController extends Controller
 {
@@ -46,51 +50,59 @@ class SubscriptionController extends Controller
         ])->redirectNow();
     }
 
+
 public function handleGatewayCallback()
 {
-    $paymentDetails = Paystack::getPaymentData();
+    try {
+        $paymentDetails = Paystack::getPaymentData();
 
-    $metadata = $paymentDetails['data']['metadata'] ?? [];
-    $userId = $metadata['user_id'] ?? null;
-    $plan = $metadata['plan'] ?? 'lite';
-    $amount = $paymentDetails['data']['amount'] ?? 0;
-    $reference = $paymentDetails['data']['reference'] ?? null;
+        $metadata = $paymentDetails['data']['metadata'] ?? [];
+        $userId = $metadata['user_id'] ?? null;
+        $plan = $metadata['plan'] ?? 'lite';
+        $amount = $paymentDetails['data']['amount'] ?? 0;
+        $reference = $paymentDetails['data']['reference'] ?? null;
 
-    $user = \App\Models\User::find($userId);
+        $user = \App\Models\User::find($userId);
 
-    if (!$user) {
-        return redirect()->route('register')->with('error', 'User not found.');
+        if (!$user) {
+            Log::error('User not found for Paystack callback. User ID: ' . $userId);
+            return redirect()->route('register')->with('error', 'User not found.');
+        }
+
+        $endsAt = $plan === 'lite' ? now()->addMonth() : now()->addYear();
+
+        // ✅ Try to create subscription
+        $subscription = Subscription::create([
+            'user_id' => $user->id,
+            'plan' => $plan,
+            'amount' => $amount,
+            'payment_reference' => $reference,
+            'starts_at' => now(),
+            'ends_at' => $endsAt,
+        ]);
+
+        Log::info('Subscription created successfully', $subscription->toArray());
+
+        // Generate subdomain
+        $subdomain = strtolower(explode('@', $user->email)[0]);
+        $fullDomain = "{$subdomain}.bloommonie.com";
+
+        // ✅ Create Tenant
+        $tenant = Tenant::create([
+            'user_id' => $user->id,
+            'domain' => $fullDomain,
+            'subscription_plan' => $plan,
+        ]);
+
+        Log::info('Tenant created successfully', $tenant->toArray());
+
+        // Redirect to subdomain
+        return redirect()->away("http://{$fullDomain}");
+    } catch (Exception $e) {
+        Log::error('Payment callback error: ' . $e->getMessage());
+        return redirect()->route('register')->with('error', 'An error occurred during subscription.');
     }
-
-    // Subscription duration
-    $endsAt = $plan === 'lite' ? now()->addMonth() : now()->addYear();
-
-    // Store subscription
-    \App\Models\Subscription::create([
-        'user_id' => $user->id,
-        'plan' => $plan,
-        'amount' => $amount,
-        'payment_reference' => $reference,
-        'starts_at' => now(),
-        'ends_at' => $endsAt,
-    ]);
-
-    // Generate unique subdomain (e.g., peter.posapp.com)
-    $subdomain = strtolower(explode('@', $user->email)[0]); // OR customize
-    $fullDomain = "{$subdomain}bloommonie.com";
-
-    // Store tenant
-    \App\Models\Tenant::create([
-        'user_id' => $user->id,
-        'domain' => $fullDomain,
-        'subscription_plan' => $plan,
-    ]);
-
-    // Optional: save current subdomain to session
-    session(['tenant_domain' => $fullDomain]);
-
-    // Redirect to tenant's subdomain
-    return redirect()->away("http://{$fullDomain}");
 }
+
 
 }
