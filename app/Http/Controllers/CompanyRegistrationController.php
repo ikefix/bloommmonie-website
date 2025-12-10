@@ -1,13 +1,62 @@
+
 <?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 
-use App\Models\Company;
+class PaystackController extends Controller
+{
+    // Redirect user to Paystack payment page
+    public function redirectToGateway(Request $request)
+    {
+        $request->validate([
+            'amount' => 'required|numeric|min:100',
+            'plan' => 'required|string',
+        ]);
 
-use App\Models\User;
+        $amount = $request->amount; // amount in Kobo
+        $email = auth()->check() ? auth()->user()->email : 'customer@example.com';
+        $callback_url = route('paystack.callback');
+
+        $response = Http::withToken(env('PAYSTACK_SECRET_KEY'))
+            ->post('https://api.paystack.co/transaction/initialize', [
+                'amount' => $amount,
+                'email' => $email,
+                'callback_url' => $callback_url,
+                'metadata' => [
+                    'plan' => $request->plan,
+                ],
+            ]);
+
+        $body = $response->json();
+
+        if (!$body['status']) {
+            return back()->with('error', 'Unable to initiate payment.');
+        }
+
+        return redirect($body['data']['authorization_url']);
+    }
+
+    // Handle Paystack callback after payment
+    public function handleGatewayCallback(Request $request)
+    {
+        $reference = $request->query('reference');
+
+        $response = Http::withToken(env('PAYSTACK_SECRET_KEY'))
+            ->get("https://api.paystack.co/transaction/verify/{$reference}");
+
+        $body = $response->json();
+
+        if ($body['status'] && $body['data']['status'] === 'success') {
+            // Payment successful, you can save to DB here
+            return redirect('/success')->with('success', 'Payment successful!');
+        }
+
+        return redirect('/pricing')->with('error', 'Payment failed or cancelled.');
+    }
+}
 
 
 class CompanyRegistrationController extends Controller

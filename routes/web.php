@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CompanyRegistrationController;
-use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PaystackController;
+
 
 
 /*
@@ -47,11 +48,6 @@ Route::post('/register-company', [CompanyRegistrationController::class, 'store']
 
 
 
-Route::get('/subscribe', [SubscriptionController::class, 'showForm'])->name('subscribe.form');
-Route::post('/paystack/checkout', [SubscriptionController::class, 'redirectToGateway'])->name('paystack.checkout');
-Route::get('/paystack/callback', [SubscriptionController::class, 'handleGatewayCallback'])->name('paystack.callback');
-
-
 
 // Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 // Route::post('login', [LoginController::class, 'login']);
@@ -59,3 +55,12 @@ Route::get('/paystack/callback', [SubscriptionController::class, 'handleGatewayC
 
 Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('register', [RegisterController::class, 'register']);
+
+//paystack route
+Route::post('/paystack/checkout', [App\Http\Controllers\PaystackController::class, 'redirectToGateway'])->name('paystack.checkout');
+Route::get('/paystack/callback', [App\Http\Controllers\PaystackController::class, 'handleGatewayCallback'])->name('paystack.callback');
+
+//success route
+Route::get('/success', function () {
+    return view('pages.success');
+})->name('payment.success');

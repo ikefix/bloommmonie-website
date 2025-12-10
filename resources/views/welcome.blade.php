@@ -1,3 +1,8 @@
+<script>
+    const isLoggedIn = {{ auth()->check() ? 'true' : 'false' }};
+</script>
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -94,132 +99,98 @@
     </div>
     <div class="feature-section">
         <div class="feature-card">
-            <img src="" alt="">
-            <h4>Quick Checkouts</h4>
-            <p>Complete sales faster with our easy-to-use Cloud based Point of Sale software that keeps all information at your fingertips.</p>
+            <img src="images/store.png" alt="">
+            <h4>Multi Location Support</h4>
+            <p>With the ability to manage multiple store locations seamlessly, keep your inventory synchronized and sales data consolidated in real-time.</p>
         </div>
         <div class="feature-card">
-            <img src="" alt="">
-            <h4>Efficient Payments</h4>
-            <p>Complete sales faster with our easy-to-use Cloud based Point of Sale software that keeps all information at your fingertips.</p>
+            <img src="images/low-stock.png" alt="">
+            <h4>Low Stock Notification</h4>
+            <p>Get timely alerts when your inventory levels are running low, helping you restock efficiently and avoid stockouts.</p>
         </div>
         <div class="feature-card">
-            <img src="" alt="">
-            <h4>Loyal Customers</h4>
-            <p>Complete sales faster with our easy-to-use Cloud based Point of Sale software that keeps all information at your fingertips.</p>
+            <img src="images/barcode-scan.png" alt="">
+            <h4>Barcode Support</h4>
+            <p>Effortlessly scan and manage products with barcode support, speeding up checkout and inventory processes.</p>
         </div>
         <div class="feature-card">
-            <img src="" alt="">
-            <h4>Automated Work</h4>
-            <p> Cloud based Point of Sale software that keeps all information at your fingertips.</p>
+            <img src="images/transfer.png" alt="image/transfer.png">
+            <h4>Stock Transfer</h4>
+            <p>Efficiently transfer stock between multiple locations to maintain optimal inventory levels and meet customer demand.</p>
         </div>
         <div class="feature-card">
-            <img src="" alt="">
-            <h4>Informed Decision</h4>
-            <p>Complete sales faster with our easy-to-use Cloud based Point of Sale software that keeps all information at your fingertips.</p>
+            <img src="images/expenses.png" alt="">
+            <h4>Expense Tracking</h4>
+            <p>Keep a detailed record of your business expenses to better manage your budget and improve profitability.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/invoice.png" alt="">
+            <h4>Professional Invoice and Quotation</h4>
+            <p>Create and send professional invoices and quotations to your customers with ease, enhancing your business's credibility and efficiency.</p>
+        </div>
+            <div class="feature-card">
+            <img src="images/discount.png" alt="">
+            <h4>Discount Management Support</h4>
+            <p>Manage discounts effectively to attract customers and boost sales while maintaining profitability.</p>
+        </div>
+            <div class="feature-card">
+            <img src="images/customer.png" alt="">
+            <h4>Customer Management</h4>
+            <p>Efficiently manage your customer database, track purchase history, and enhance customer relationships to drive repeat business.</p>
         </div>
     </div>
     <div class="b-color" id="business">
-      <div class="business-support">
-        <div><h2>BloomPOS can be used in any of the Business</h2></div>
-        <div>
-          <div class="usecase">
-            <button data-business="grocery">Super Market</button>
-            <button data-business="vape">Fashion</button>
-            <button data-business="book">Book Store</button>
-            <button data-business="pharmacy">Pharmacy Shop</button>
-            <button data-business="jewelry">Hair/Cosmetics</button>
-            <button data-business="general">Lot's More</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="business-card" id="businessCard">
-        <div class="card-content">
-          <div class="text-content">
-            <h5 class="green-heading">Business Type</h5>
-            <h3 id="businessTitle">Fashion Boutique</h3>
-            <p id="businessDescription">
-              Fashion boutiques thrive on providing a unique shopping experience with a personalized touch.
-              With SaasyPOS, manage your inventory effortlessly, keep track of your bestsellers, and provide quick checkouts
-              for your fashion-forward customers.
-            </p>
-            <p>Get your free trial now and see the difference!</p>
-            <a class="businessbtn" href="">Start 14 Days Free Trial</a>
-          </div>
-          <img id="businessImage" src="images/pics.jpg" alt="Fashion Boutique" />
-        </div>
+  <div class="business-support">
+    <div><h2>BloomPOS can be used in any of the Business</h2></div>
+    <div>
+      <div class="usecase">
+        <button data-business="grocery">Super Market</button>
+        <button data-business="fashion">Fashion</button>
+        <button data-business="book">Book Store</button>
+        <button data-business="pharmacy">Pharmacy Shop</button>
+        <button data-business="cosmetics">Hair/Cosmetics</button>
+        <button data-business="general">Lot's More</button>
       </div>
     </div>
-      <div class="aboutbloom">
-        <div>
-          <div class="text-content">
-            <h5>Why BloomPOS</h5>
-            <h1>Simplify Your Inventory Management Process</h1>
-            <ul>
-              <li>
-                <span>
-                  <i class='bx bx-check-square' ></i>
-                </span>
-                <span>
-                  <h5>Real-time Inventory Tracking</h5>
-                  <p>Monitor stock levels instantly across all locations, reducing the chances of overselling or stockouts.</p>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i class='bx bx-check-square' ></i>
-                </span>
-                <span>
-                  <h5>Inventory Optimization</h5>
-                  <p>Automatically restock popular items and remove slow-movers with intelligent inventory suggestions.</p>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i class='bx bx-check-square' ></i>
-                </span>
-                <span>
-                  <h5>Multi-location Support</h5>
-                  <p>Manage inventory across several outlets from a single dashboard with seamless synchronization.</p>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i class='bx bx-check-square' ></i>
-                </span>
-                <span>
-                  <h5>Detailed Analytics</h5>
-                  <p>Gain insights into product performance, sales trends, and inventory turnover with advanced reports.</p>
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div class="image-content">
-            <img src="{{ url('images/digital-tablet.png') }}" alt="Digital Tablet">
-          </div>
-        </div>
+  </div>
+
+  <div class="business-card" id="businessCard">
+    <div class="card-content">
+      <div class="text-content">
+        <h5 class="green-heading">Business Type</h5>
+        <h3 id="businessTitle">Fashion Boutique</h3>
+        <p id="businessDescription">
+          Fashion boutiques thrive on providing a unique experience…
+        </p>
+        <p>Get your free trial now and see the difference!</p>
+        <a class="businessbtn" href="">Start 14 Days Free Trial</a>
       </div>
+
+      <img id="businessImage" src="images/pics.jpg" alt="Fashion Boutique" />
+    </div>
+  </div>
+</div>
+
 @include("layouts.price")
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
           <h1>Start your free trial today and discover the transformative power of our Smart Inventory Management System.</h1>
-          <a href="#contact"><button class="start-free">Start 14 days Free Trial</button></a>
+          <a href="#contact"><button class="start-free">Reuest a Demo</button></a>
         </div>
       </div>
       <div class="faq-wrapper">
         <div class="faq-intro">
           <h5>Frequently Asked Questions</h5>
           <h1>Do You Have Any Questions?</h1>
-          <p>Have questions about SaasyPOS? We’ve got you covered. Explore our FAQ section to find answers to common inquiries.</p>
+          <p>Have questions about BloomMonie? We’ve got you covered. Explore our FAQ section to find answers to common inquiries.</p>
           <a href="#contact"><button class="ask-btn">Ask Your Question</button></a>
         </div>
       
         <div class="faq-columns">
           <div class="faq-item">
-            <button class="faq-question">Can I pay monthly?<span class="icon">+</span></button>
-            <div class="faq-answer">Yes, you can pay for SaasyPOS on a monthly basis.</div>
+            <button class="faq-question">How do I get The software?<span class="icon">+</span></button>
+            <div class="faq-answer">You can get the software by Registering on our website and choosing a suitable plan, after that you can make payment and get your Software Access Login sent to you via mail, SMS and WhatsApp.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question">Is there a yearly plan?<span class="icon">+</span></button>
@@ -231,7 +202,11 @@
           </div>
           <div class="faq-item">
             <button class="faq-question">Where can I get help?<span class="icon">+</span></button>
-            <div class="faq-answer">You can reach out via our 24/7 support or visit our Help Center.</div>
+            <div class="faq-answer">You can reach out via our 24/7 support or Chat our  Help Center on WhatsApp +234 09152150124.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can i get your software as a one time purchase instead of Yearly or monthly subscription?<span class="icon">+</span></button>
+            <div class="faq-answer">Yes you can get the software as a one time software customized to your Business brand and need. The price for the one time purchase is on the website at the price section. You can reach us for more information.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question">Do I need a credit card?<span class="icon">+</span></button>
@@ -271,16 +246,35 @@
             <h2>Get in Touch</h2>
             <p>We’d love to hear from you! Whether you have a question about features, pricing, need a demo, or anything else — our team is ready to answer all your questions.</p>
             <p><strong>Email:</strong> info@yourcompany.com</p>
-            <p><strong>Phone:</strong> +234 800 000 0000</p>
-            <p><strong>Address:</strong> 123 Company Street, Lagos, Nigeria</p>
+            <p><strong>Phone:</strong> +234 09152150124</p>
+            <p><strong>Address:</strong> N0 45 Airport Road Rukpokwu Market Junction, Port Harcourt, Rivers State, Nigeria</p>
           </div>
         </div>
       </section>
 
 
       @include('layouts.footer')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const subscriptionForms = document.querySelectorAll('.pricing-card form');
 
-      <script>
+    subscriptionForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+
+            if (!isLoggedIn) {
+                e.preventDefault();
+
+                // Stylish popup message
+                alert("You must be logged in to continue.\n\nPlease login to proceed with subscription.");
+
+                window.location.href = "/login"; // redirect to login
+            }
+        });
+    });
+});
+</script>
+
+<script>
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.querySelector('.navbar-toggler');
   const middleMenu = document.querySelector('.custom-middle');
@@ -294,70 +288,71 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
       
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const businessInfo = {
-            grocery: {
-              title: "Grocery Store",
-              description:
-                "Run your grocery store efficiently with real-time stock tracking, barcode scanning, and quick billing using BloomPOS.",
-              image: "images/pics.jpg"
-            },
-            vape: {
-              title: "Vape Shop",
-              description:
-                "BloomPOS helps vape shops manage their unique inventory, track flavor trends, and provide seamless transactions.",
-              image: "images/vape.jpg"
-            },
-            book: {
-              title: "Book Store",
-              description:
-                "Bookstores benefit from organized inventory, category filters, and easy sales tracking with BloomPOS.",
-              image: ""
-            },
-            pharmacy: {
-              title: "Pharmacy Shop",
-              description:
-                "Pharmacies can use BloomPOS to manage prescriptions, control medicine stock, and serve customers quickly and securely.",
-              image: "images/pharmacy.jpg"
-            },
-            jewelry: {
-              title: "Jewelry Store",
-              description:
-                "Handle high-value products and custom pricing with ease. BloomPOS keeps your jewelry store running smoothly.",
-              image: "images/jewelry.jpg"
-            },
-            general: {
-              title: "General Shop",
-              description:
-                "From everyday essentials to seasonal products, BloomPOS adapts to your general store’s dynamic needs.",
-              image: "images/general.jpg"
-            }
-          };
-        
-          const buttons = document.querySelectorAll(".usecase button");
-          const titleEl = document.getElementById("businessTitle");
-          const descEl = document.getElementById("businessDescription");
-          const imgEl = document.getElementById("businessImage");
-        
-          buttons.forEach((button) => {
-            button.addEventListener("click", function () {
-              // Remove active class from all
-              buttons.forEach((btn) => btn.classList.remove("active"));
-              this.classList.add("active");
-        
-              const type = this.getAttribute("data-business");
-              const info = businessInfo[type];
-        
-              if (info) {
-                titleEl.textContent = info.title;
-                descEl.textContent = info.description;
-                imgEl.setAttribute("src", info.image);
-                imgEl.setAttribute("alt", info.title);
-              }
-            });
-          });
-        });
-        </script>
+document.addEventListener("DOMContentLoaded", function () {
+  const businessInfo = {
+    grocery: {
+      title: "Super Market",
+      description:
+        "Manage your supermarket or provision store with fast checkout, real-time stock updates, and barcode scanning using BloomPOS.",
+      image: "images/pics.jpg"
+    },
+    fashion: {
+      title: "Fashion Store",
+      description:
+        "Fashion stores benefit from easy stock tracking, outfit categorization, and smooth customer checkout with BloomPOS.",
+      image: "images/fashion.jpg"
+    },
+    book: {
+      title: "Book Store",
+      description:
+        "Organize books by category, manage stock, and track sales effortlessly with BloomPOS.",
+      image: "images/books.jpg"
+    },
+    pharmacy: {
+      title: "Pharmacy Shop",
+      description:
+        "BloomPOS helps pharmacies manage prescriptions, medicine stock, and customer records securely.",
+      image: "images/pharmacy.jpg"
+    },
+    cosmetics: {
+      title: "Hair & Cosmetics",
+      description:
+        "Manage beauty products, track fast-selling items, and run your store efficiently with BloomPOS.",
+      image: "images/hair.avif"
+    },
+    general: {
+      title: "General Store",
+      description:
+        "BloomPOS adapts to any business — from gadgets to home items — with flexible inventory tools.",
+      image: "images/logo.jpeg"
+    }
+  };
+
+  const buttons = document.querySelectorAll(".usecase button");
+  const titleEl = document.getElementById("businessTitle");
+  const descEl = document.getElementById("businessDescription");
+  const imgEl = document.getElementById("businessImage");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove active class
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      const type = this.getAttribute("data-business");
+      const info = businessInfo[type];
+
+      if (info) {
+        titleEl.textContent = info.title;
+        descEl.textContent = info.description;
+        imgEl.src = info.image;
+        imgEl.alt = info.title;
+      }
+    });
+  });
+});
+</script>
+
         <script>
           const faqButtons = document.querySelectorAll(".faq-question");
         

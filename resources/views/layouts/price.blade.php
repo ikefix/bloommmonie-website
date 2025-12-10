@@ -20,16 +20,14 @@
         <!-- Free Plan -->
         <div class="pricing-card">
             <h3>Free</h3>
-            <p class="price" data-ngn-month="0" data-ngn-year="0">₦0</p>
+            <p class="price" data-ngn-month="7500" data-ngn-year="70000">₦7500/month</p>
             <ul>
-                <li>1 User (Admin)</li>
+                <li>1 User</li>
                 <li>1 store/location</li>
-                <li>Multilingual Support</li>
                 <li>Maximum Product 500</li>
                 <li>Sales Report</li>
                 <li>Stock Adjustment</li>
                 <li>Report Download</li>
-                <li>Reporting and Business Analytics</li>
                 <li>24/7 Support</li>
             </ul>
             <a href="{{ route('register') }}" class="button">Get Started</a>
@@ -38,16 +36,15 @@
         <!-- Lite Plan -->
         <div class="pricing-card featured">
             <h3>Lite</h3>
-            <p class="price" data-ngn-month="1500" data-ngn-year="15000">₦1500/mo</p>
+            <p class="price" data-ngn-month="10000" data-ngn-year="100000">₦7500/mo</p>
             <ul>
-                <li>1 User</li>
-                <li>1 store/Location</li>
-                <li>Multilingual Support</li>
-                <li>Maximum Product 500</li>
+                <li>Unlimited User</li>
+                <li>2 store/Location</li>
+                <li>Unlimited product</li>
                 <li>Sales Report</li>
                 <li>Report Download</li>
                 <li>Stock Adjustment</li>
-                <li>Reporting and Business Analytics</li>
+                <li>Expense Tracking </li>
                 <li>24/7 Support</li>
             </ul>
             <form action="{{ route('paystack.checkout') }}" method="POST">
@@ -61,12 +58,19 @@
         <!-- Business Plan -->
         <div class="pricing-card">
             <h3>Business</h3>
-            <p class="price" data-ngn-month="3000" data-ngn-year="30000">₦3000/mo</p>
+            <p class="price" data-ngn-month="15000" data-ngn-year="150000">₦15000/mo</p>
             <ul>
-                <li>1–4 Users</li>
-                <li>1–4 Stores</li>
-                <li>Sales Report, Expenses Tracker</li>
-                <li>Profit & Loss Statement</li>
+                <li>Unlimited User</li>
+                <li>2 store/Location</li>
+                <li>Unlimited product</li>
+                <li>Sales Report</li>
+                <li>Report Download</li>
+                <li>Stock Adjustment</li>
+                <li>Expense Tracking </li>
+                <li>Discount Management Support</li>
+                <li>Customer Management</li>
+                <li>Profit and Loss Statement</li>
+                <li>Barcode support</li>
                 <li>24/7 Support</li>
             </ul>
             <form action="{{ route('paystack.checkout') }}" method="POST">
@@ -80,11 +84,19 @@
         <!-- Enterprise Plan -->
         <div class="pricing-card">
             <h3>Enterprise</h3>
-            <p class="price" data-ngn-month="6000" data-ngn-year="60000">₦6000/mo</p>
+            <p class="price" data-ngn-month="1000000" data-ngn-year="1000000">₦1000000</p>
             <ul>
-                <li>Unlimited Users & Stores</li>
-                <li>Advanced Analytics & Reports</li>
-                <li>Expenses Tracker</li>
+                <li>Unlimited User</li>
+                <li>2 store/Location</li>
+                <li>Unlimited product</li>
+                <li>Sales Report</li>
+                <li>Report Download</li>
+                <li>Stock Adjustment</li>
+                <li>Expense Tracking </li>
+                <li>Discount Management Support</li>
+                <li>Customer Management</li>
+                <li>Profit and Loss Statement</li>
+                <li>Barcode support</li>
                 <li>24/7 Support</li>
             </ul>
             <form action="{{ route('paystack.checkout') }}" method="POST">
