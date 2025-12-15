@@ -87,8 +87,8 @@
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
-                    <a class="custom-button trial" href="">Start 14 Days Free Trial</a>
-                    <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a>
+                    <a class="custom-button trial" href="">Book a 14 Days Free Trial</a>
+                    {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
                 </div>
                 <small>No Credit Card Required!</small>
             </div>
@@ -163,7 +163,7 @@
           Fashion boutiques thrive on providing a unique experience…
         </p>
         <p>Get your free trial now and see the difference!</p>
-        <a class="businessbtn" href="">Start 14 Days Free Trial</a>
+        <a class="businessbtn" href="">Book a 14 Days Free Trial</a>
       </div>
 
       <img id="businessImage" src="images/pics.jpg" alt="Fashion Boutique" />
