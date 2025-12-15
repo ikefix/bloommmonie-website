@@ -245,7 +245,7 @@
           <div class="contact-info">
             <h2>Get in Touch</h2>
             <p>We’d love to hear from you! Whether you have a question about features, pricing, need a demo, or anything else — our team is ready to answer all your questions.</p>
-            <p><strong>Email:</strong> info@yourcompany.com</p>
+            <p><strong>Email:</strong> info@bloommonie.com</p>
             <p><strong>Phone:</strong> +234 09152150124</p>
             <p><strong>Address:</strong> N0 45 Airport Road Rukpokwu Market Junction, Port Harcourt, Rivers State, Nigeria</p>
           </div>

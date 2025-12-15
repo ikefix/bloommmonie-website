@@ -2,10 +2,11 @@
     <div class="container">
         <div class="con-name">
             <a class="navbar-brand custom-logo" href="{{ url('/') }}">
-                {{ config('app.name', 'Bloommonie') }}
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Bloommonie Logo" class="logomobile" style="height:40px;" >
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <i class='bx bx-menu-wider'></i> 
+                <i class='bx bx-menu-wider'></i>
+                
             </button>
         </div>
 

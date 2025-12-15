@@ -830,3 +830,21 @@ input, button, select, optgroup, textarea {
     height: auto;
 }
 
+.logomobile {
+    height: 40px;
+}
+
+.logodesk {
+    height: 35px;
+    display: none;
+}
+
+/* When screen is small (toggle mode) */
+@media (max-width: 768px) {
+    .logomobile {
+        display: none;
+    }
+    .logodesk {
+        display: inline;
+    }
+}
