@@ -10,7 +10,7 @@
         <span>Get discount for yearly purchases!</span>
     </div>
 
-    <div class="pricing-container" style="display:flex; gap:1rem; justify-content:center;">
+    <div class="pricing-container" style="display:flex; gap:1rem; justify-content:center; align-items:center;">
 
         <!-- Free Plan -->
         <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:300px; text-align:center;">
