@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Models\DemoRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DemoRequestMail;
 
 class DemoController extends Controller
 {
