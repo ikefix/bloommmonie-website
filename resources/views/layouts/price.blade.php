@@ -13,7 +13,7 @@
     <div class="pricing-container" style="display:flex; gap:1rem; justify-content:center;">
 
         <!-- Free Plan -->
-        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:220px; text-align:center;">
+        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:300px; text-align:center;">
             <h3 style="color:#f10ade;">Free</h3>
             <p class="price" data-ngn-month="7500" data-ngn-year="70000">₦70,000/yr</p>
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Lite Plan -->
-        <div class="pricing-card featured" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:220px; text-align:center; background:#fff0ff;">
+        <div class="pricing-card featured" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:300px; text-align:center; background:#fff0ff;">
             <h3 style="color:#f10ade;">Lite</h3>
             <p class="price" data-ngn-month="10000" data-ngn-year="100000">₦100,000/yr</p>
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -51,7 +51,7 @@
         </div>
 
         <!-- Business Plan -->
-        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:220px; text-align:center;">
+        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:300px; text-align:center;">
             <h3 style="color:#f10ade;">Business</h3>
             <p class="price" data-ngn-month="15000" data-ngn-year="150000">₦150,000/yr</p>
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -77,7 +77,7 @@
         </div>
 
         <!-- Enterprise Plan (one-time purchase) -->
-        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:220px; text-align:center; background:#fff0ff;">
+        <div class="pricing-card" style="border:2px solid #f10ade; border-radius:8px; padding:1rem; width:300px; text-align:center; background:#fff0ff;">
             <h3 style="color:#f10ade;">Enterprise</h3>
             <h3 class="price2">₦1,000,000</h3>
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
