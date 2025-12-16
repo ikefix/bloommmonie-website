@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\DemoRequest;
 use App\Mail\DemoRequestMail;
 
-Mail::to($demo->email)->send(new DemoRequestMail($demo));
 
 class DemoController extends Controller
 {
