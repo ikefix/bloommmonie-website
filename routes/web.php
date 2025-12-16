@@ -7,7 +7,7 @@ use App\Http\Controllers\CompanyRegistrationController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaystackController;
-
+use App\Http\Controllers\DemoController;
 
 
 /*
@@ -64,3 +64,10 @@ Route::get('/paystack/callback', [App\Http\Controllers\PaystackController::class
 Route::get('/success', function () {
     return view('pages.success');
 })->name('payment.success');
+
+
+// Show demo signup form
+Route::get('/demo-signup', [DemoController::class, 'showForm'])->name('demo.signup');
+
+// Handle demo form submission
+Route::post('/demo-signup', [DemoController::class, 'submitForm'])->name('demo.submit');

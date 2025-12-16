@@ -87,7 +87,7 @@
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
-                    <a class="custom-button trial" href="">Book a 14 Days Free Trial</a>
+                    <a class="custom-button trial" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
                     {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
                 </div>
                 <small>No Credit Card Required!</small>
