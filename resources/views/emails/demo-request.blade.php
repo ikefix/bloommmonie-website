@@ -3,30 +3,22 @@
 
 Hello {{ $demo->name }},
 
-Thank you for booking your **14 Days Free Demo** with **{{ config('app.name') }}**.
+Thank you for booking your **14 Days Free Demo**.
 
-We have received your request and are **processing your demo setup**.  
-You will receive another email once your demo is ready to use.
+We are processing your demo request and will notify you once it's ready.
 
-**Your Details:**  
-- **Name:** {{ $demo->name }}  
-- **Email:** {{ $demo->email }}  
 @if($demo->phone)
-- **Phone:** {{ $demo->phone }}  
+**Phone:** {{ $demo->phone }}
 @endif
+
 @if($demo->note)
-- **Note:** {{ $demo->note }}  
+**Note:** {{ $demo->note }}
 @endif
-
-If you have any questions, feel free to contact our support team:
-
-📞 **09000000000**  
-✉️ **support@bloommonie.com**
 
 @component('mail::button', ['url' => url('/')])
-Visit Our Website
+Visit Website
 @endcomponent
 
-Thanks,  
+Thanks,<br>
 **{{ config('app.name') }} Team**
 @endcomponent
