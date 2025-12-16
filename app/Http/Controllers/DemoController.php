@@ -19,29 +19,23 @@ class DemoController extends Controller
 
     // Handle form submission
     public function submitForm(Request $request)
-{
-    $request->validate([
-        'name'  => 'required|string|max:255',
-        'email' => 'required|email|max:255',
-        'phone' => 'nullable|string|max:20',
-        'note'  => 'nullable|string|max:500',
-    ]);
-
-    // Save to database
-    $demo = DemoRequest::create([
-        'name'  => $request->name,
-        'email' => $request->email,
-        'phone' => $request->phone,
-        'note'  => $request->note,
-    ]);
-
-    // Send email to user
-    Mail::send('emails.demo-request', ['demo' => $demo], function ($message) use ($demo) {
-        $message->to($demo->email, $demo->name)
-                ->subject('Your Demo Request is Received');
-    });
+    {
+        // 1️⃣ Validate the form
+        $request->validate([
+            'name'  => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:demo_requests,email',
+            'phone' => 'nullable|string|max:20',
+            'note'  => 'nullable|string|max:500',
+        ]);
     
-
-    return redirect()->route('demo.signup')->with('success', 'Your demo request has been submitted! Check your email.');
-}
+        // 2️⃣ Save the demo request to the database
+        $demo = DemoRequest::create($request->only('name', 'email', 'phone', 'note'));
+    
+        // 3️⃣ Send email to user using a Mailable
+        Mail::to($demo->email)->send(new DemoRequestMail($demo));
+    
+        // 4️⃣ Redirect back with success message
+        return redirect()->route('demo.signup')
+                         ->with('success', 'Your demo request has been submitted! Check your email.');
+    }
 }
