@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-use App\Models\DemoRequest;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\DemoRequestMail;
+use App\Models\DemoRequest;
 
 class DemoController extends Controller
 {
@@ -17,27 +15,29 @@ class DemoController extends Controller
     }
 
     // Handle form submission
-    public function submit(Request $request)
+    public function submitForm(Request $request)
 {
-    // Validate
     $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|unique:demo_requests,email',
+        'name'  => 'required|string|max:255',
+        'email' => 'required|email|max:255',
         'phone' => 'nullable|string|max:20',
-        'note' => 'nullable|string',
+        'note'  => 'nullable|string|max:500',
     ]);
 
     // Save to database
     $demo = DemoRequest::create([
-        'name' => $request->name,
+        'name'  => $request->name,
         'email' => $request->email,
         'phone' => $request->phone,
-        'note' => $request->note,
+        'note'  => $request->note,
     ]);
 
-    // Send email
-    Mail::to($demo->email)->send(new \App\Mail\DemoRequestMail($demo));
+    // Send email to user
+    Mail::send('emails.demo-request', ['name' => $demo->name], function ($message) use ($demo) {
+        $message->to($demo->email, $demo->name)
+                ->subject('Your Demo Request is Received');
+    });
 
-    return redirect()->back()->with('success', 'Demo request submitted! We will contact you soon.');
+    return redirect()->route('demo.signup')->with('success', 'Your demo request has been submitted! Check your email.');
 }
 }
