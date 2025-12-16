@@ -33,10 +33,11 @@ class DemoController extends Controller
     ]);
 
     // Send email to user
-    Mail::send('emails.demo-request', ['name' => $demo->name], function ($message) use ($demo) {
+    Mail::send('emails.demo-request', ['demo' => $demo], function ($message) use ($demo) {
         $message->to($demo->email, $demo->name)
                 ->subject('Your Demo Request is Received');
     });
+    
 
     return redirect()->route('demo.signup')->with('success', 'Your demo request has been submitted! Check your email.');
 }
