@@ -14,68 +14,69 @@ class PaystackController extends Controller
 {
     // Redirect user to Paystack payment page
     public function redirectToGateway(Request $request)
-    {
-        $request->validate([
-            'amount' => 'required|numeric|min:100',
-            'plan'   => 'required|string',
-        ]);
-    
-        $amount       = $request->amount;
-        $email        = auth()->user()->email;
-        $callback_url = route('paystack.callback');
-    
-        // Build HTTP client
-        $http = Http::withToken(env('PAYSTACK_SECRET_KEY'));
-    
-        // ONLY use cacert on localhost
-        if (app()->environment('local')) {
-            $http = $http->withOptions([
-                'verify' => 'C:/xampp/php/ssl/cacert.pem'
-            ]);
-        }
-    
-        // Initialize transaction
-        $response = $http->post(
-            'https://api.paystack.co/transaction/initialize',
-            [
-                'amount'       => $amount,
-                'email'        => $email,
-                'callback_url' => $callback_url,
-                'metadata'     => [
-                    'plan' => $request->plan,
-                ],
-            ]
-        );
-    
-        if (!$response->ok()) {
-            return back()->with('error', 'Unable to initiate payment.');
-        }
-    
-        $body = $response->json();
-    
-        if (!isset($body['status']) || $body['status'] !== true) {
-            return back()->with('error', 'Unable to initiate payment.');
-        }
-    
-        // ✅ Create payment record as PENDING
-        Payment::create([
-            'user_id'   => auth()->id(),
-            'reference' => $body['data']['reference'],
-            'amount'    => $amount,
-            'status'    => 'pending',
-        ]);
-    
-        // ✅ Create pending subscription
-        $this->createPendingSubscription(
-            auth()->id(),
-            $request->plan,
-            $amount,
-            $body['data']['reference']
-        );
-    
-        // Redirect to Paystack
-        return redirect($body['data']['authorization_url']);
+{
+    if (!auth()->check()) {
+        return redirect()->route('login')
+            ->with('error', 'Please login before making payment.');
     }
+
+    $request->validate([
+        'amount' => 'required|numeric|min:100',
+        'plan'   => 'required|string',
+    ]);
+
+    $amount       = $request->amount;
+    $email        = auth()->user()->email;
+    $callback_url = route('paystack.callback');
+
+    $http = Http::withToken(env('PAYSTACK_SECRET_KEY'));
+
+    // ONLY for XAMPP
+    if (app()->environment('local') && file_exists('C:/xampp/php/ssl/cacert.pem')) {
+        $http = $http->withOptions([
+            'verify' => 'C:/xampp/php/ssl/cacert.pem'
+        ]);
+    }
+
+    $response = $http->post(
+        'https://api.paystack.co/transaction/initialize',
+        [
+            'amount'       => $amount,
+            'email'        => $email,
+            'callback_url' => $callback_url,
+            'metadata'     => [
+                'plan' => $request->plan,
+            ],
+        ]
+    );
+
+    if (!$response->ok()) {
+        return back()->with('error', 'Unable to reach Paystack.');
+    }
+
+    $body = $response->json();
+
+    if (!isset($body['status']) || $body['status'] !== true) {
+        return back()->with('error', 'Payment initialization failed.');
+    }
+
+    Payment::create([
+        'user_id'   => auth()->id(),
+        'reference' => $body['data']['reference'],
+        'amount'    => $amount,
+        'status'    => 'pending',
+    ]);
+
+    $this->createPendingSubscription(
+        auth()->id(),
+        $request->plan,
+        $amount,
+        $body['data']['reference']
+    );
+
+    return redirect($body['data']['authorization_url']);
+}
+
     
 
     // Handle Paystack callback
