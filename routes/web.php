@@ -57,7 +57,8 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 //paystack route
-Route::post('/paystack/checkout', [App\Http\Controllers\PaystackController::class, 'redirectToGateway'])->name('paystack.checkout');
+Route::post('/paystack/checkout', [PaystackController::class, 'redirectToGateway'])->name('paystack.checkout');
+
 Route::get('/paystack/callback', [App\Http\Controllers\PaystackController::class, 'handleGatewayCallback'])->name('paystack.callback');
 
 //success route
