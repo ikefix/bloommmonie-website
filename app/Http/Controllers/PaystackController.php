@@ -19,51 +19,64 @@ class PaystackController extends Controller
             'amount' => 'required|numeric|min:100',
             'plan'   => 'required|string',
         ]);
-
-        $amount = $request->amount;
-        $email = auth()->user()->email;
+    
+        $amount       = $request->amount;
+        $email        = auth()->user()->email;
         $callback_url = route('paystack.callback');
-
+    
+        // Build HTTP client
+        $http = Http::withToken(env('PAYSTACK_SECRET_KEY'));
+    
+        // ONLY use cacert on localhost
+        if (app()->environment('local')) {
+            $http = $http->withOptions([
+                'verify' => 'C:/xampp/php/ssl/cacert.pem'
+            ]);
+        }
+    
         // Initialize transaction
-        $response = Http::withOptions([
-            'verify' => 'C:/xampp/php/ssl/cacert.pem'
-        ])
-        ->withToken(env('PAYSTACK_SECRET_KEY'))
-        ->post('https://api.paystack.co/transaction/initialize', [
-            'amount'       => $amount,
-            'email'        => $email,
-            'callback_url' => $callback_url,
-            'metadata'     => [
-                'plan' => $request->plan,
-            ],
-        ]);
-
-        $body = $response->json();
-
-        if (!$body['status']) {
+        $response = $http->post(
+            'https://api.paystack.co/transaction/initialize',
+            [
+                'amount'       => $amount,
+                'email'        => $email,
+                'callback_url' => $callback_url,
+                'metadata'     => [
+                    'plan' => $request->plan,
+                ],
+            ]
+        );
+    
+        if (!$response->ok()) {
             return back()->with('error', 'Unable to initiate payment.');
         }
-
-        // ✅ Create payment record as PENDING before redirecting
-        // save payment record
+    
+        $body = $response->json();
+    
+        if (!isset($body['status']) || $body['status'] !== true) {
+            return back()->with('error', 'Unable to initiate payment.');
+        }
+    
+        // ✅ Create payment record as PENDING
         Payment::create([
             'user_id'   => auth()->id(),
             'reference' => $body['data']['reference'],
             'amount'    => $amount,
             'status'    => 'pending',
         ]);
-
-        // save pending subscription also
+    
+        // ✅ Create pending subscription
         $this->createPendingSubscription(
             auth()->id(),
             $request->plan,
             $amount,
             $body['data']['reference']
         );
-
-
+    
+        // Redirect to Paystack
         return redirect($body['data']['authorization_url']);
     }
+    
 
     // Handle Paystack callback
     public function handleGatewayCallback(Request $request)
