@@ -16,8 +16,7 @@ class PaystackController extends Controller
     public function redirectToGateway(Request $request)
 {
     if (!auth()->check()) {
-        return redirect()->route('login')
-            ->with('error', 'Please login before making payment.');
+        return redirect()->route('login')->with('error', 'Please login before making payment.');
     }
 
     $request->validate([
@@ -25,57 +24,48 @@ class PaystackController extends Controller
         'plan'   => 'required|string',
     ]);
 
-    $amount       = $request->amount;
-    $email        = auth()->user()->email;
-    $callback_url = route('paystack.callback');
+    $amount = $request->amount;  // in kobo
+    $email = auth()->user()->email;
+    $callback = route('paystack.callback');
 
-    $http = Http::withToken(env('PAYSTACK_SECRET_KEY'));
-
-    // ONLY for XAMPP
-    if (app()->environment('local') && file_exists('C:/xampp/php/ssl/cacert.pem')) {
-        $http = $http->withOptions([
-            'verify' => 'C:/xampp/php/ssl/cacert.pem'
-        ]);
-    }
-
-    $response = $http->post(
-        'https://api.paystack.co/transaction/initialize',
-        [
-            'amount'       => $amount,
-            'email'        => $email,
-            'callback_url' => $callback_url,
-            'metadata'     => [
+    // Production HTTP call
+    $response = Http::withToken(env('PAYSTACK_SECRET_KEY'))
+        ->post('https://api.paystack.co/transaction/initialize', [
+            'amount' => $amount,
+            'email' => $email,
+            'callback_url' => $callback,
+            'metadata' => [
                 'plan' => $request->plan,
+                'user_id' => auth()->id(),
             ],
-        ]
-    );
+        ]);
 
-    if (!$response->ok()) {
-        return back()->with('error', 'Unable to reach Paystack.');
+    if (!$response->successful()) {
+        return back()->with('error', 'Payment gateway not responding.');
     }
 
     $body = $response->json();
 
-    if (!isset($body['status']) || $body['status'] !== true) {
+    if (!isset($body['status']) || !$body['status']) {
         return back()->with('error', 'Payment initialization failed.');
     }
 
+    // Save payment
     Payment::create([
-        'user_id'   => auth()->id(),
+        'user_id' => auth()->id(),
         'reference' => $body['data']['reference'],
-        'amount'    => $amount,
-        'status'    => 'pending',
+        'amount' => $amount,
+        'status' => 'pending',
+        'plan_name' => $request->plan,
     ]);
 
-    $this->createPendingSubscription(
-        auth()->id(),
-        $request->plan,
-        $amount,
-        $body['data']['reference']
-    );
+    // Create pending subscription
+    $this->createPendingSubscription(auth()->id(), $request->plan, $amount, $body['data']['reference']);
 
+    // Redirect to Paystack
     return redirect($body['data']['authorization_url']);
 }
+
 
     
 
