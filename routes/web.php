@@ -8,7 +8,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaystackController;
 use App\Http\Controllers\DemoController;
-
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,9 @@ Route::get('/welcome', function () {
  Auth::routes(); // Ensure Auth is imported
 
 Route::get('/home', [HomeController::class, 'index'])->name('home'); // Ensure HomeController exists
+
+
+Route::post('/send-form', [ContactController::class, 'send'])->name('form.send');
 
 // PAGES LINKS
 Route::get('/features', function () {
@@ -57,8 +60,7 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 //paystack route
-Route::post('/paystack/checkout', [PaystackController::class, 'redirectToGateway'])->name('paystack.checkout');
-
+Route::post('/paystack/checkout', [App\Http\Controllers\PaystackController::class, 'redirectToGateway'])->name('paystack.checkout');
 Route::get('/paystack/callback', [App\Http\Controllers\PaystackController::class, 'handleGatewayCallback'])->name('paystack.callback');
 
 //success route

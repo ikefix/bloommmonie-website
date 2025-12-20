@@ -172,6 +172,62 @@
 </div>
 
 @include("layouts.price")
+
+<section class="testimonial-section">
+  <div class="testimonial-wrapper">
+
+    <!-- LEFT: TEXT -->
+    <div class="testimonial-text">
+      <span class="badge">Trusted by Growing Businesses</span>
+      <h2>Real Businesses. Real Results.</h2>
+
+      <p class="quote">
+        “BloomPOS completely transformed how we run our stores.
+        We now track sales across multiple locations in real time,
+        prevent stock losses, and close sales faster than ever.”
+      </p>
+
+      <div class="testimonial-user">
+        <img src="{{asset('images/dakl.png')}}" alt="Customer">
+        <div>
+          <h4>Omeke Peter</h4>
+          <small>Founder, Ogalearn Enterprise</small>
+        </div>
+      </div>
+
+      <div class="testimonial-stats">
+        <div>
+          <h3>40%</h3>
+          <p>Faster Checkout</p>
+        </div>
+        <div>
+          <h3>99.9%</h3>
+          <p>Stock Accuracy</p>
+        </div>
+        <div>
+          <h3>24/7</h3>
+          <p>Cloud Access</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: VIDEO -->
+    <div class="testimonial-video">
+      <div class="video-frame">
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="BloomPOS Testimonial"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">Watch how BloomPOS helps businesses scale effortlessly</p>
+    </div>
+
+  </div>
+</section>
+
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
@@ -224,7 +280,8 @@
           <!-- Left: Form -->
           <div class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="send-message.php" method="POST">
+            <form action="{{ route('form.send') }}" method="POST">
+              @csrf
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required />
 
