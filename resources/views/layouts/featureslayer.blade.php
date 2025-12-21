@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FEAtures</title>
+  <title>Features</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -60,48 +60,48 @@
             </div>
 <section class="trackfeature">
   <h2 class="feat">FEATURES</h2>
-  <div class="features_gen">
-    <div class="features-item">
-      <i class='bx bxs-cart'></i>
-      <h3>Track Sales</h3>
-      <p>Monitor daily sales and performance in real-time</p>
+<div class="feature-section">
+        <div class="feature-card">
+            <img src="images/store.png" alt="">
+            <h4>Multi Location Support</h4>
+            <p>With the ability to manage multiple store locations seamlessly, keep your inventory synchronized and sales data consolidated in real-time.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/low-stock.png" alt="">
+            <h4>Low Stock Notification</h4>
+            <p>Get timely alerts when your inventory levels are running low, helping you restock efficiently and avoid stockouts.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/barcode-scan.png" alt="">
+            <h4>Barcode Support</h4>
+            <p>Effortlessly scan and manage products with barcode support, speeding up checkout and inventory processes.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/transfer.png" alt="image/transfer.png">
+            <h4>Stock Transfer</h4>
+            <p>Efficiently transfer stock between multiple locations to maintain optimal inventory levels and meet customer demand.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/expenses.png" alt="">
+            <h4>Expense Tracking</h4>
+            <p>Keep a detailed record of your business expenses to better manage your budget and improve profitability.</p>
+        </div>
+        <div class="feature-card">
+            <img src="images/invoice.png" alt="">
+            <h4>Professional Invoice and Quotation</h4>
+            <p>Create and send professional invoices and quotations to your customers with ease, enhancing your business's credibility and efficiency.</p>
+        </div>
+            <div class="feature-card">
+            <img src="images/discount.png" alt="">
+            <h4>Discount Management Support</h4>
+            <p>Manage discounts effectively to attract customers and boost sales while maintaining profitability.</p>
+        </div>
+            <div class="feature-card">
+            <img src="images/customer.png" alt="">
+            <h4>Customer Management</h4>
+            <p>Efficiently manage your customer database, track purchase history, and enhance customer relationships to drive repeat business.</p>
+        </div>
     </div>
-    <div class="features-item">
-      <i class='bx bx-dollar'></i>
-      <h3>Manage Payments</h3>
-      <p>Accept cash, card, bank transfers & more</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bxs-briefcase'></i>
-      <h3>Employee Management</h3>
-      <p>Track staff performance and shift schedules</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bxs-cart'></i>
-      <h3>Track Sales</h3>
-      <p>Monitor daily sales and performance in real-time</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bx-dollar'></i>
-      <h3>Manage Payments</h3>
-      <p>Accept cash, card, bank transfers & more</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bxs-briefcase'></i>
-      <h3>Employee Management</h3>
-      <p>Track staff performance and shift schedules</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bxs-cart'></i>
-      <h3>Track Sales</h3>
-      <p>Monitor daily sales and performance in real-time</p>
-    </div>
-    <div class="features-item">
-      <i class='bx bx-dollar'></i>
-      <h3>Manage Payments</h3>
-      <p>Accept cash, card, bank transfers & more</p>
-    </div>
-  </div>
 </section>
 
 @extends('layouts.footer')
