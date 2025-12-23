@@ -280,12 +280,7 @@
           <!-- Left: Form -->
           <div class="contact-form">
             <h2>Send Us a Message</h2>
-<<<<<<< HEAD
             <form action="{{ route('contact.send') }}" method="POST">
-=======
-            <form action="{{ route('form.send') }}" method="POST">
-              @csrf
->>>>>>> ee0e9a64e86dd4ecea56f3f20b8f84db08b621d4
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required />
 
