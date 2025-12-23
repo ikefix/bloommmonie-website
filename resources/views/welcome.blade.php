@@ -224,7 +224,7 @@
           <!-- Left: Form -->
           <div class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="send-message.php" method="POST">
+            <form action="{{ route('contact.send') }}" method="POST">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required />
 
