@@ -9,11 +9,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaystackController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ContactController;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> ee0e9a64e86dd4ecea56f3f20b8f84db08b621d4
 
 /*
 |--------------------------------------------------------------------------
@@ -36,12 +33,7 @@ Route::get('/welcome', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home'); // Ensure HomeController exists
 
-<<<<<<< HEAD
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
-=======
-
-Route::post('/send-form', [ContactController::class, 'send'])->name('form.send');
->>>>>>> ee0e9a64e86dd4ecea56f3f20b8f84db08b621d4
 
 // PAGES LINKS
 Route::get('/features', function () {
