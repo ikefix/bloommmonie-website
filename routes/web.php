@@ -41,7 +41,7 @@ Route::get('/features', function () {
 })->name('features');
 
 Route::get('/pricing', function () {
-    return view('layouts.pricing');
+    return view('pages.pricing');
 })->name('pricing');
 
 Route::get('/support', function () {
