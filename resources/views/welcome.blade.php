@@ -232,7 +232,7 @@
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
           <h3>Bloommonie just makes business easier.
-With Bloommonie, I don’t need to calculate sales or stock by hand again.
+With Bloommonie, you don’t need to calculate sales or stock by hand again.
  Everything is automated and accurate. If you’re serious about growing your business in Nigeria, this
  software will really help you scale without wahala.</h3>
           <a href="{{ route('demo.signup') }}"><button class="start-free">Request a Demo</button></a>
