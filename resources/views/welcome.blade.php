@@ -231,8 +231,8 @@
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
-          <h1>Start your free trial today and discover the transformative power of our Smart Inventory Management System.</h1>
-          <a href="{{ route('demo.signup') }}"><button class="start-free">Reuest a Demo</button></a>
+          <h1>.</h1>
+          <a href="{{ route('demo.signup') }}"><button class="start-free">Request a Demo</button></a>
         </div>
       </div>
       <div class="faq-wrapper">

@@ -124,9 +124,9 @@ class PaystackController extends Controller
             $amount = $payment->amount;
 
             // Send mail
-            Mail::to($user->email)->send(
-                new \App\Mail\PaymentSuccess($user, $plan, $amount)
-            );
+            // Mail::to($user->email)->send(
+            //     new \App\Mail\PaymentSuccess($user, $plan, $amount)
+            // );
         }
 
         return redirect('/success')->with(
