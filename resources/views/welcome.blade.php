@@ -182,9 +182,9 @@
       <h2>Real Businesses. Real Results.</h2>
 
       <p class="quote">
-        “BloomPOS completely transformed how we run our stores.
-        We now track sales across multiple locations in real time,
-        prevent stock losses, and close sales faster than ever.”
+   Since I started using Bloommonie, managing my business has been easier. 
+  Sales records are clear, inventory is accurate, and I can see my profit anytime.
+  It’s a real game-changer for growing businesses in Nigeria.”
       </p>
 
       {{-- <div class="testimonial-user">
@@ -231,7 +231,10 @@
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
-          <h1>.</h1>
+          <h3>Bloommonie just makes business easier.
+With Bloommonie, I don’t need to calculate sales or stock by hand again.
+ Everything is automated and accurate. If you’re serious about growing your business in Nigeria, this
+ software will really help you scale without wahala.</h3>
           <a href="{{ route('demo.signup') }}"><button class="start-free">Request a Demo</button></a>
         </div>
       </div>
