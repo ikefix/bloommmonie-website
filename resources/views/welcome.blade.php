@@ -187,18 +187,18 @@
         prevent stock losses, and close sales faster than ever.”
       </p>
 
-      <div class="testimonial-user">
+      {{-- <div class="testimonial-user">
         <img src="{{asset('images/dakl.png')}}" alt="Customer">
         <div>
           <h4>Omeke Peter</h4>
           <small>Founder, Ogalearn Enterprise</small>
         </div>
-      </div>
+      </div> --}}
 
       <div class="testimonial-stats">
         <div>
-          <h3>40%</h3>
-          <p>Faster Checkout</p>
+          <h3>99%</h3>
+          <p>Reduction in Inventory Losses</p>
         </div>
         <div>
           <h3>99.9%</h3>
@@ -206,7 +206,7 @@
         </div>
         <div>
           <h3>24/7</h3>
-          <p>Cloud Access</p>
+          <p>Customer Support</p>
         </div>
       </div>
     </div>
@@ -222,7 +222,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      <p class="video-caption">Watch how BloomPOS helps businesses scale effortlessly</p>
+      <p class="video-caption">Watch how Bloommonie helps businesses scale effortlessly</p>
     </div>
 
   </div>
