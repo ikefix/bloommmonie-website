@@ -215,7 +215,7 @@
     <div class="testimonial-video">
       <div class="video-frame">
         <iframe 
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          src="https://www.youtube.com/watch?v=WEdo1T_5Ucc"
           title="BloomPOS Testimonial"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
