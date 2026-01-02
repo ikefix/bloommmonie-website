@@ -1,5 +1,5 @@
 .general-support {
-  background: #f8f9fa;
+  background:#e7c0d9;
   padding: 60px 20px;
   text-align: center;
 }
@@ -40,7 +40,7 @@
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #e7c0d9;
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -101,3 +101,47 @@
 .card-button:hover {
   background-color: #0056b3;
 }
+
+.icon-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.icon-card {
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-card i {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-card span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Hover effect */
+.icon-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Brand colors */
+.icon-card.whatsapp i { color: #25D366; }
+.icon-card.email i { color: #EA4335; }
+.icon-card.phone i { color: #0d6efd; }

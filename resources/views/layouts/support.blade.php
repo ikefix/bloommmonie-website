@@ -66,7 +66,7 @@
     Explore all features included in our plans on our <a href="/features">features page</a>.
   </h3>
   <p class="support-description">
-    At BloomPOS, we understand the importance of reliable and round-the-clock support 
+    At Bloommonie, we understand the importance of reliable and round-the-clock support 
     for your business. To ensure your peace of mind, we offer 24/7 support, so you can
     focus on running your business while we take care of any technical issue that may arise.
   </p>
@@ -75,31 +75,27 @@
 <!-- Support Cards -->
 <section class="support-cards">
   <h2 class="support-cards-title">Reach Us Anytime</h2>
-  <div class="card-container">
-    <div class="support-card">
+
+  <div class="icon-card-container">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/2349152150124" target="_blank" class="icon-card whatsapp">
       <i class='bx bxl-whatsapp'></i>
-      <h3>Chat on WhatsApp</h3>
-      <p>Message us directly for quick responses</p>
-      <a href="https://wa.me/2348012345678" target="_blank" class="card-button">
-        <i class='bx bxl-whatsapp'></i> Start Chat
-      </a>
-    </div>
-    <div class="support-card">
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:support@bloommonie.com" class="icon-card email">
       <i class='bx bx-envelope'></i>
-      <h3>Email Us</h3>
-      <p>Send your questions or feedback</p>
-      <a href="mailto:support@yourdomain.com" class="card-button">
-        <i class='bx bx-envelope'></i> Send Email
-      </a>
-    </div>
-    <div class="support-card">
+      <span>Email</span>
+    </a>
+
+    <!-- Phone -->
+    <a href="tel:+2347060837121" class="icon-card phone">
       <i class='bx bx-phone-call'></i>
-      <h3>Call Support</h3>
-      <p>We're available 24/7 to assist you</p>
-      <a href="tel:+2348012345678" class="card-button">
-        <i class='bx bx-phone-call'></i> Call Now
-      </a>
-    </div>
+      <span>Call: 07060837121</span>
+    </a>
+
   </div>
 </section>
 
