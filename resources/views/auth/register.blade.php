@@ -79,9 +79,6 @@
           <option value="Other">Other</option>
         </select>
       </div>
-      <div class="form-group hidden" id="customIndustryContainer">
-        <input type="text" name="custom_industry" id="customIndustry" placeholder="Enter your industry">
-      </div>
       <div class="form-group">
         <select id="currentInventorySystem" name="current_inventory_system" required>
           <option value="">Select Current System</option>
@@ -92,9 +89,9 @@
           <option value="other">Other</option>
         </select>
       </div>
-      <div class="form-group hidden" id="customInventorySystemContainer">
+      {{-- <div class="form-group hidden" id="customInventorySystemContainer">
         <input type="text" name="current_inventory_system_other" placeholder="If Other, please specify">
-      </div>
+      </div> --}}
       <button type="button" class="btn secondary prev-btn">Previous</button>
       <button type="button" class="btn primary next-btn">Next</button>
     </div>
