@@ -59,7 +59,7 @@
             <div class="footer-box">
                 <h3>Connect With Us</h3>
                 <ul class="connect-icon">
-                    <li><i class='bx bxl-facebook-circle'></i><a href="#">Facebook</a></li>
+                    <li><i class='bx bxl-facebook-circle'></i><a href="https://www.facebook.com/profile.php?id=61583596811874">Facebook</a></li>
                     <li><i class='bx bxl-twitter' ></i><a href="#">Twitter</a></li>
                     <li><i class='bx bxl-linkedin' ></i><a href="#">LinkedIn</a></li>
                     <li><i class='bx bxl-gmail' ></i><a href="#">Email Us</a></li>
