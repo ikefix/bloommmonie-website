@@ -85,10 +85,14 @@
     </a>
 
     <!-- Email -->
-    <a href="mailto:support@bloommonie.com" class="icon-card email">
-      <i class='bx bx-envelope'></i>
-      <span>Email</span>
-    </a>
+    <a href="mailto:support@bloommonie.com
+      ?subject=Bloommonie%20Support
+      &body=Hello%20Bloommonie%20Support,%0A%0AI%20need%20help%20with..."
+      class="icon-card email">
+        <i class='bx bx-envelope'></i>
+        <span>Email</span>
+      </a>
+
 
     <!-- Phone -->
     <a href="tel:+2347060837121" class="icon-card phone">
