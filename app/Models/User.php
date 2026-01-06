@@ -22,7 +22,7 @@ protected $fillable = [
     'annual_revenue',
 
     'industry',
-    'custom_industry',
+    // 'custom_industry',
 
     'current_inventory_system',
    
