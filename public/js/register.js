@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('step-2-indicator'),
     document.getElementById('step-3-indicator')
   ];
+  const form = document.querySelector('form');
 
   let currentStep = 0;
 
@@ -17,11 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function validateStep(index) {
+    const inputs = steps[index].querySelectorAll('input, select, textarea');
+    for (let input of inputs) {
+      if (!input.checkValidity()) {
+        input.reportValidity(); // shows the browser's validation message
+        return false;
+      }
+    }
+    return true;
+  }
+
   nextBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
+      if (validateStep(currentStep)) {
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        }
       }
     });
   });
@@ -33,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
         showStep(currentStep);
       }
     });
+  });
+
+  // Validate all steps on submit
+  form.addEventListener('submit', (e) => {
+    for (let i = 0; i < steps.length; i++) {
+      if (!validateStep(i)) {
+        e.preventDefault(); // stop submission
+        currentStep = i;
+        showStep(currentStep); // go to first invalid step
+        return false;
+      }
+    }
   });
 
   // Handle 'Other' options
