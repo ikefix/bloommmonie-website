@@ -159,7 +159,7 @@
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>Unlimited Users</li>
-                <li>2 store/Location</li>
+                <li>Unlimited store Location</li>
                 <li>Unlimited Products</li>
                 <li>Sales Report</li>
                 <li>Report Download</li>
