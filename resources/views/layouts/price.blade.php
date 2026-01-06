@@ -15,7 +15,7 @@
 
     }
 </style>
-<section class="pricing-section">
+<section class="pricing-section" id="price">
     <h2 style="text-align:center; color:#f10ade;">Choose Your Plan</h2>
 
     <div class="billing-toggle" style="margin-bottom: 1rem; display:flex; align-items:center; justify-content:center; gap:1rem; color:#f10ade; font-weight:bold;">

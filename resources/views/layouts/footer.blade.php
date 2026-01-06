@@ -15,25 +15,21 @@
                 <ul>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">Sign Up</a>
+                        <a href="{{ route('register') }}">Sign Up</a>
                     </li>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">Pricing</a>
+                        <a href="#price">Pricing</a>
                     </li>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">F.A.Q</a>
-                    </li>
-                    <li>
-                        <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">About</a>
+                        <a href="#fa">F.A.Q</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Company Info -->
-            <div class="footer-box">
+            {{-- <div class="footer-box">
                 <h3>Company</h3>
                 <ul>
                     <li>
@@ -53,7 +49,7 @@
                         <a href="#">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
 
             <!-- Social / Contact -->
             <div class="footer-box">

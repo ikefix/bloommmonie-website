@@ -240,7 +240,7 @@ With Bloommonie, you don’t need to calculate sales or stock by hand again.
           <a href="#contact"><button class="ask-btn">Ask Your Question</button></a>
         </div>
       
-        <div class="faq-columns">
+        <div class="faq-columns" id="fa">
           <div class="faq-item">
             <button class="faq-question">How do I get The software?<span class="icon">+</span></button>
             <div class="faq-answer">You can get the software by Registering on our website and choosing a suitable plan, after that you can make payment and get your Software Access Login sent to you via mail, SMS and WhatsApp.</div>
