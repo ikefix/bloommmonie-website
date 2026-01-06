@@ -214,13 +214,7 @@
     <!-- RIGHT: VIDEO -->
     <div class="testimonial-video">
       <div class="video-frame">
-        <iframe 
-          src="https://www.youtube.com/watch?v=WEdo1T_5Ucc"
-          title="BloomPOS Testimonial"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9Lx23I-T1C0?si=plZiLwJlIMWSK2DK" title="Bloommonie Testimonal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <p class="video-caption">Watch how Bloommonie helps businesses scale effortlessly</p>
     </div>
