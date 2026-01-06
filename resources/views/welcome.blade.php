@@ -47,7 +47,7 @@
             <!-- Logo -->
             <a class="custom-logo" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
-                BloomMonie
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Bloommonie Logo" class="logomobile" style="height:40px;" >
             </a>
 
             {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
