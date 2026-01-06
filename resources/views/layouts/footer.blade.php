@@ -60,9 +60,11 @@
                 <h3>Connect With Us</h3>
                 <ul class="connect-icon">
                     <li><i class='bx bxl-facebook-circle'></i><a href="https://www.facebook.com/profile.php?id=61583596811874">Facebook</a></li>
-                    <li><i class='bx bxl-twitter' ></i><a href="#">Twitter</a></li>
-                    <li><i class='bx bxl-linkedin' ></i><a href="#">LinkedIn</a></li>
-                    <li><i class='bx bxl-gmail' ></i><a href="#">Email Us</a></li>
+                    <li><i class='bx bxl-instagram' ></i><a href="#">Instagram</a></li>
+                    {{-- <li><i class='bx bxl-linkedin' ></i><a href="#">LinkedIn</a></li> --}}
+                    <li><i class='bx bxl-gmail' ></i><a href="mailto:support@bloommonie.com
+      ?subject=Bloommonie%20Support
+      &body=Hello%20Bloommonie%20Support,%0A%0AI%20need%20help%20with...">Email Us</a></li>
                 </ul>
             </div>
 
