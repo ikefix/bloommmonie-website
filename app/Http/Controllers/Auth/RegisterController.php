@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'annual_revenue' => $data['annual_revenue'],
 
             'industry' => $data['industry'],
-            // 'custom_industry' => $data['custom_industry'] ?? null,
+            // 'custom_industry' => $data['custom_industry'] ?? null,m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            m    m m                 m                            
 
             'current_inventory_system' => $data['current_inventory_system'],
 
