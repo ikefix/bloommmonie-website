@@ -99,13 +99,13 @@
     <!-- Step 3 -->
     <div id="step-3" class="step">
       <h4>Location & Industry</h4>
-      <div class="form-group">
+      {{-- <div class="form-group">
         <select id="country" name="country" required>
           <option value="">Select Country</option>
           <option value="Nigeria">Nigeria</option>
           <option value="Kenya">Kenya</option>
         </select>
-      </div>
+      </div> --}}
       <div class="form-group">
         <select id="state" name="state" required>
           <option value="">Select State</option>

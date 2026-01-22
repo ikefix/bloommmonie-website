@@ -51,7 +51,7 @@ class RegisterController extends Controller
             'current_inventory_system_other' => ['nullable', 'string'],
 
             // Location (Nigeria only)
-            'country' => ['required', 'in:Nigeria'],
+            'country' => ['nullable', 'in:Nigeria'],
             'state' => ['required', 'string', 'max:100'],
         ]);
     }
