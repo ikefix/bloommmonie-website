@@ -277,6 +277,13 @@ With Bloommonie, you don’t need to calculate sales or stock by hand again.
           <!-- Left: Form -->
           <div class="contact-form">
             <h2>Send Us a Message</h2>
+            
+              @if(session('success'))
+                  <div class="alert alert-success">
+                      {{ session('success') }}
+                  </div>
+              @endif
+
             <form action="{{ route('contact.send') }}" method="POST">
               @csrf
               <label for="name">Your Name</label>
