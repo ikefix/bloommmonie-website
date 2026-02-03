@@ -7,25 +7,30 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function send(Request $request)
-    {
 
-        $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'subject' => 'required|string',
-            'message' => 'required|string',
-        ]);
+public function send(Request $request)
+{
+    $data = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email',
+        'subject' => 'required|string|max:255',
+        'message' => 'required|string',
+    ]);
 
-        Mail::raw(
-            "Name: {$data['name']}\nEmail: {$data['email']}\nSubject: {$data['subject']}\n\n{$data['message']}",
-            function ($mail) use ($data) {
-                $mail->to('support@bloommonie.com')
-                    ->subject($data['subject']);
-            }
-        );
+    Mail::raw(
+        "You have a new contact message:\n\n"
+        . "Name: {$data['name']}\n"
+        . "Email: {$data['email']}\n"
+        . "Subject: {$data['subject']}\n\n"
+        . "Message:\n{$data['message']}",
+        function ($mail) use ($data) {
+            $mail->to('omekeikechukwu877@gmail.com')
+                 ->replyTo($data['email'])
+                 ->subject($data['subject']);
+        }
+    );
 
+    return back()->with('success', 'Your message has been sent successfully.');
+}
 
-        return back()->with('success', 'Form submitted successfully');
-    }
 }
