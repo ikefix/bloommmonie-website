@@ -44,5 +44,9 @@
             </div>
         @endif
     </form>
+
+    <div>
+        <p>Don't have an Account <a href="{{ route('register') }}" style="color: #f10ade; text-decoration: none;"> Sign Up</a></p>
+    </div>
 </div>
 @endsection

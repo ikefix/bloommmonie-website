@@ -15,25 +15,21 @@
                 <ul>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">Sign Up</a>
+                        <a href="{{ route('register') }}">Sign Up</a>
                     </li>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">Pricing</a>
+                        <a href="#price">Pricing</a>
                     </li>
                     <li>
                         <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">F.A.Q</a>
-                    </li>
-                    <li>
-                        <span class="link-arrow"><i class='bx bx-chevrons-right'></i></span>
-                        <a href="#">About</a>
+                        <a href="#fa">F.A.Q</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Company Info -->
-            <div class="footer-box">
+            {{-- <div class="footer-box">
                 <h3>Company</h3>
                 <ul>
                     <li>
@@ -53,16 +49,18 @@
                         <a href="#">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
 
             <!-- Social / Contact -->
             <div class="footer-box">
                 <h3>Connect With Us</h3>
                 <ul class="connect-icon">
-                    <li><i class='bx bxl-facebook-circle'></i><a href="#">Facebook</a></li>
-                    <li><i class='bx bxl-twitter' ></i><a href="#">Twitter</a></li>
-                    <li><i class='bx bxl-linkedin' ></i><a href="#">LinkedIn</a></li>
-                    <li><i class='bx bxl-gmail' ></i><a href="#">Email Us</a></li>
+                    <li><i class='bx bxl-facebook-circle'></i><a href="https://www.facebook.com/profile.php?id=61583596811874">Facebook</a></li>
+                    <li><i class='bx bxl-instagram' ></i><a href="#">Instagram</a></li>
+                    {{-- <li><i class='bx bxl-linkedin' ></i><a href="#">LinkedIn</a></li> --}}
+                    <li><i class='bx bxl-gmail' ></i><a href="mailto:support@bloommonie.com
+      ?subject=Bloommonie%20Support
+      &body=Hello%20Bloommonie%20Support,%0A%0AI%20need%20help%20with...">Email Us</a></li>
                 </ul>
             </div>
 

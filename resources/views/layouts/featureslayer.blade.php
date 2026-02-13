@@ -60,7 +60,11 @@
             </div>
 <section class="trackfeature">
   <h2 class="feat">FEATURES</h2>
+<<<<<<< HEAD
   <div class="feature-section">
+=======
+<div class="feature-section">
+>>>>>>> b728047c9b01454e7716d5cce215dc909b258391
         <div class="feature-card">
             <img src="images/store.png" alt="">
             <h4>Multi Location Support</h4>

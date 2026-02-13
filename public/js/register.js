@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('step-2-indicator'),
     document.getElementById('step-3-indicator')
   ];
+  const form = document.querySelector('form');
 
   let currentStep = 0;
 
@@ -17,11 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  function stepHasEmptyRequiredFields(index) {
+    const inputs = steps[index].querySelectorAll('input, select, textarea');
+    for (let input of inputs) {
+      if (input.hasAttribute('required') && !input.value.trim()) {
+        input.focus();
+        return true;
+      }
+    }
+    return false;
+  }
+
   nextBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
+      if (!stepHasEmptyRequiredFields(currentStep)) {
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        }
       }
     });
   });
@@ -35,20 +49,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  form.addEventListener('submit', function(e) {
+    for (let i = 0; i < steps.length; i++) {
+      if (stepHasEmptyRequiredFields(i)) {
+        e.preventDefault();
+        currentStep = i;
+        showStep(currentStep);
+        alert("Please fill in all required fields in this step."); // optional
+        return false;
+      }
+    }
+  });
+
   // Handle 'Other' options
   const industrySelect = document.getElementById('industry');
   const customIndustryContainer = document.getElementById('customIndustryContainer');
   const inventorySelect = document.getElementById('currentInventorySystem');
   const customInventorySystemContainer = document.getElementById('customInventorySystemContainer');
 
-  industrySelect.addEventListener('change', () => {
-    customIndustryContainer.classList.toggle('hidden', industrySelect.value !== 'Other');
-  });
+  if (industrySelect && customIndustryContainer) {
+    industrySelect.addEventListener('change', () => {
+      customIndustryContainer.classList.toggle('hidden', industrySelect.value !== 'Other');
+    });
+  }
 
-  inventorySelect.addEventListener('change', () => {
-    customInventorySystemContainer.classList.toggle('hidden', inventorySelect.value !== 'other');
-  });
+  if (inventorySelect && customInventorySystemContainer) {
+    inventorySelect.addEventListener('change', () => {
+      customInventorySystemContainer.classList.toggle('hidden', inventorySelect.value !== 'other');
+    });
+  }
 
-  // Initial render
   showStep(currentStep);
 });

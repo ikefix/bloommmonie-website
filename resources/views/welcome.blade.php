@@ -47,7 +47,7 @@
             <!-- Logo -->
             <a class="custom-logo" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
-                BloomMonie
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Bloommonie Logo" class="logomobile" style="height:40px;" >
             </a>
 
             {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -172,67 +172,14 @@
 </div>
 
 @include("layouts.price")
-
-<section class="testimonial-section">
-  <div class="testimonial-wrapper">
-
-    <!-- LEFT: TEXT -->
-    <div class="testimonial-text">
-      <span class="badge">Trusted by Growing Businesses</span>
-      <h2>Real Businesses. Real Results.</h2>
-
-      <p class="quote">
-        “BloomPOS completely transformed how we run our stores.
-        We now track sales across multiple locations in real time,
-        prevent stock losses, and close sales faster than ever.”
-      </p>
-
-      <div class="testimonial-user">
-        <img src="{{asset('images/dakl.png')}}" alt="Customer">
-        <div>
-          <h4>Omeke Peter</h4>
-          <small>Founder, Ogalearn Enterprise</small>
-        </div>
-      </div>
-
-      <div class="testimonial-stats">
-        <div>
-          <h3>40%</h3>
-          <p>Faster Checkout</p>
-        </div>
-        <div>
-          <h3>99.9%</h3>
-          <p>Stock Accuracy</p>
-        </div>
-        <div>
-          <h3>24/7</h3>
-          <p>Cloud Access</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: VIDEO -->
-    <div class="testimonial-video">
-      <div class="video-frame">
-        <iframe 
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="BloomPOS Testimonial"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="video-caption">Watch how BloomPOS helps businesses scale effortlessly</p>
-    </div>
-
-  </div>
-</section>
-
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
-          <h1>Start your free trial today and discover the transformative power of our Smart Inventory Management System.</h1>
-          <a href="{{ route('demo.signup') }}"><button class="start-free">Reuest a Demo</button></a>
+          <h3>Bloommonie just makes business easier.
+With Bloommonie, you don’t need to calculate sales or stock by hand again.
+ Everything is automated and accurate. If you’re serious about growing your business in Nigeria, this
+ software will really help you scale without wahala.</h3>
+          <a href="{{ route('demo.signup') }}"><button class="start-free">Request a Demo</button></a>
         </div>
       </div>
       <div class="faq-wrapper">
@@ -243,7 +190,7 @@
           <a href="#contact"><button class="ask-btn">Ask Your Question</button></a>
         </div>
       
-        <div class="faq-columns">
+        <div class="faq-columns" id="fa">
           <div class="faq-item">
             <button class="faq-question">How do I get The software?<span class="icon">+</span></button>
             <div class="faq-answer">You can get the software by Registering on our website and choosing a suitable plan, after that you can make payment and get your Software Access Login sent to you via mail, SMS and WhatsApp.</div>
@@ -280,8 +227,7 @@
           <!-- Left: Form -->
           <div class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="{{ route('form.send') }}" method="POST">
-              @csrf
+            <form action="send-message.php" method="POST">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" required />
 
@@ -308,7 +254,30 @@
           </div>
         </div>
       </section>
-
+<a href="https://wa.me/2349152150124" target="_blank" 
+   style="
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     width: 60px;
+     height: 60px;
+     background-color: #25D366;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 30px;
+     color: white;
+     text-decoration: none;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+     z-index: 9999;
+   ">
+  <!-- WhatsApp SVG Icon (example from UXWing) -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+    <path d="M20.52 3.48a11.73 11.73 0 0 0-16.6 0 11.7 11.7 0 0 0-2.88 12.42l-.78 2.84 2.9-.76a11.72 11.72 0 0 0 5.06 1.3h.01c6.49 0 11.8-5.28 11.8-11.8a11.73 11.73 0 0 0-3.51-8.24zM12.01 20.19a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3 0.78.8-2.74-.24-.36a9.92 9.92 0 0 1-1.5-5.3c0-5.49 4.46-9.95 9.95-9.95 2.66 0 5.17 1.04 7.06 2.93a9.93 9.93 0 0 1 2.92 7.05c0 5.5-4.46 9.96-9.95 9.96z"/>
+    <path d="M17.16 14.37c-.26-.13-1.53-.76-1.77-.85s-.42-.13-.6.13c-.18.26-.69.85-.85 1.02s-.31.17-.57.06a7.17 7.17 0 0 1-2.16-1.33 8.3 8.3 0 0 1-1.54-1.91c-.16-.26-.02-.4.12-.55.12-.13.26-.31.39-.47.13-.17.17-.31.26-.51.09-.17 0-.31-.01-.43-.01-.13-.6-1.44-.82-1.97-.22-.52-.44-.45-.6-.46-.15-.01-.33-.01-.5-.01-.17 0-.43.06-.66.31s-.86.84-.86 2.04.88 2.36 1.01 2.52c.13.17 1.75 2.68 4.24 3.76.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.53-.62 1.75-1.22.22-.59.22-1.1.15-1.22-.07-.12-.26-.19-.55-.32z"/>
+  </svg>
+</a>
 
       @include('layouts.footer')
 <script>

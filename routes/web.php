@@ -8,8 +8,8 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaystackController;
 use App\Http\Controllers\DemoController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LiveSessionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,16 +32,13 @@ Route::get('/welcome', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home'); // Ensure HomeController exists
 
-
-Route::post('/send-form', [ContactController::class, 'send'])->name('form.send');
-
 // PAGES LINKS
 Route::get('/features', function () {
     return view('layouts.featureslayer');
 })->name('features');
 
 Route::get('/pricing', function () {
-    return view('layouts.pricing');
+    return view('pages.pricing');
 })->name('pricing');
 
 Route::get('/support', function () {

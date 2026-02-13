@@ -22,17 +22,17 @@ class CreateUsersTable extends Migration
             $table->string('industry')->nullable();
             $table->string('custom_industry')->nullable();
             $table->string('current_inventory_system')->nullable();
-            $table->string('current_inventory_system_other')->nullable();
+            // $table->string('current_inventory_system_other')->nullable();
             $table->string('country')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
 
             // POS software fields
-            $table->string('role')->nullable(); // e.g., admin, cashier, manager
-            $table->unsignedBigInteger('shop_id')->nullable(); // ← Foreign key removed
+            // $table->string('role')->nullable(); // e.g., admin, cashier, manager
+            // $table->unsignedBigInteger('shop_id')->nullable(); // ← Foreign key removed
 
             // Laravel auth defaults
-            $table->timestamp('email_verified_at')->nullable();
+            // $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
