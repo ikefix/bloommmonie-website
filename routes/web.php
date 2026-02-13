@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PaystackController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LiveSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,3 +75,6 @@ Route::get('/demo-signup', [DemoController::class, 'showForm'])->name('demo.sign
 
 // Handle demo form submission
 Route::post('/demo-signup', [DemoController::class, 'submitForm'])->name('demo.submit');
+
+Route::post('/live-session/book', [LiveSessionController::class, 'store'])
+    ->name('live-session.store');
