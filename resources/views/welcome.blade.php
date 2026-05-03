@@ -14,15 +14,13 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">   
          <link rel="stylesheet" href="styles.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/pricing.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
-
-        <style>
-        </style>
     </head>
     <body class="antialiased">
         
@@ -59,27 +57,33 @@
                 <ul class="custom-menu">
                     <li class="custom-item"><a class="custom-link" href="{{ url('/#business') }}">Business Types</a></li>
                     <li class="custom-item"><a class="custom-link" href="{{ url('/support') }}">24/7 Support</a></li>
-                    <li class="custom-item"><a class="custom-link" href="{{ url('/pricing') }}">Pricing</a></li>
+                    {{-- <li class="custom-item"><a class="custom-link" href="{{ url('/pricing') }}">Pricing</a></li> --}}
                     <li class="custom-item"><a class="custom-link" href="{{ url('/features') }}">Features</a></li>
                 </ul>
             </div>
         
             <!-- Right Navigation -->
             <ul class="custom-right">
-                @guest
-                    @if (Route::has('login'))
-                        <li class="custom-item">
-                            <a class="custom-link login-button custom-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                    @endif
-        
-                    @if (Route::has('register'))
-                        <li class="custom-item">
-                            <a class="custom-link signup-button custom-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                    @endif
-                @endguest
-            </ul>
+
+              @guest
+
+                  <li class="custom-item">
+                      <a class="custom-link login-button custom-button" 
+                        href="https://bloomonie.store" target="_blank">
+                        Visit Store
+                      </a>
+                  </li>
+
+                  <li class="custom-item">
+                      <a class="custom-link signup-button custom-button" 
+                        href="https://bloomonie.store" target="_blank">
+                        Register
+                      </a>
+                  </li>
+
+              @endguest
+
+          </ul>
         </div>        
         <div class="hero">
             <div class="hero-text">
@@ -170,8 +174,59 @@
     </div>
   </div>
 </div>
+<section class="py-5 text-white" style="background: linear-gradient(135deg,#2563eb,#9333ea);">
 
-@include("layouts.price")
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT -->
+            <div class="col-md-6">
+
+                <h1 class="fw-bold display-5 mb-3">
+                    Download Our Desktop App
+                </h1>
+
+                <p class="lead mb-4">
+                    Manage your store faster and more efficiently with our powerful desktop application.
+                    Enjoy better performance, offline access, and a smoother workflow.
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-md-6 text-center">
+
+                <div class="bg-white text-dark p-5 rounded-4 shadow-lg d-inline-block">
+
+                    <i class="fa-solid fa-download fs-1 mb-3"></i>
+
+                    <h5 class="fw-bold mb-2">
+                        Download for Windows
+                    </h5>
+
+                    <p class="text-muted small mb-4">
+                        Windows 10 & 11 supported
+                    </p>
+
+                    <a href="/downloads/bloomonie-setup.exe" 
+                       class="btn btn-dark px-4 py-2 fw-semibold" 
+                       download>
+
+                        Download
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
