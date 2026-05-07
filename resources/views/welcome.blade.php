@@ -263,9 +263,11 @@
         </div>
 
     </div>
-
 </section>
 <br>
+
+
+@include('layouts.price')
 
       <div class="calltoaction">
         <div class="cta-text">

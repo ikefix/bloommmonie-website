@@ -51,7 +51,7 @@
                 <li>24/7 Support</li>
             </ul>
 
-            <div style="margin-top:auto;">
+            {{-- <div style="margin-top:auto;">
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="15000000">
@@ -61,7 +61,7 @@
                         Subscribe
                     </button>
                 </form>
-            </div>
+            </div> --}}
         </div>
 
         <!--lite plan-->
@@ -88,7 +88,7 @@
             <li>24/7 Support</li>
         </ul>
 
-        <div style="margin-top:auto;">
+        {{-- <div style="margin-top:auto;">
             <form action="{{ route('paystack.checkout') }}" method="POST">
                 @csrf
                 <input type="hidden" name="amount" value="100000">
@@ -98,7 +98,7 @@
                     Subscribe
                 </button>
             </form>
-        </div>
+        </div> --}}
     </div>
 
         <!-- Business Plan -->
@@ -129,7 +129,7 @@
                 <li>24/7 Support</li>
             </ul>
 
-            <div style="margin-top:auto;">
+            {{-- <div style="margin-top:auto;">
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="15000000">
@@ -139,7 +139,7 @@
                         Subscribe
                     </button>
                 </form>
-            </div>
+            </div> --}}
         </div>
 
         <!-- Enterprise Plan -->
@@ -172,7 +172,7 @@
                 <li>24/7 Support</li>
             </ul>
 
-            <div style="margin-top:auto;">
+            {{-- <div style="margin-top:auto;">
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="70000000">
@@ -182,7 +182,7 @@
                         Subscribe
                     </button>
                 </form>
-            </div>
+            </div> --}}
         </div>
 
     </div>
