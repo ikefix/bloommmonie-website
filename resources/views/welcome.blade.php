@@ -92,7 +92,7 @@
                 </p>
                 <div class="hero-link">
                     <a class="custom-button trial" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
-                    <a class="custom-button demo" href="" download><b>Download Desktop</b></a>
+                    <a class="custom-button demo" href="{{ asset('public/Bloommonie Setup 1.0.0.exe') }}" download><b>Download Desktop</b></a>
                 </div>
                 <small>No Credit Card Required!</small>
             </div>
@@ -242,7 +242,7 @@
                         Optimized for speed and offline usage
                     </p>
 
-                    <a href=""
+                    <a href="{{ asset('public/Bloommonie Setup 1.0.0.exe') }}"
                        class="btn px-4 py-2 fw-semibold"
                        style="
                            background:#f10ade;
