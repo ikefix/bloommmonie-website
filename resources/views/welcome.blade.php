@@ -177,11 +177,7 @@
     </div>
   </div>
 </div>
-<section class="py-5 text-white" style="background: linear-gradient(135deg,#2563eb,#9333ea);">
 
-    <div class="container">
-
-        <div class="row align-items-center g-5">
 <section class="py-5" style="background:#f9fafb;">
 
     <div class="container">
@@ -191,13 +187,6 @@
             <!-- LEFT -->
             <div class="col-md-6">
 
-                <h1 class="fw-bold display-5 mb-3">
-                    Download Our Desktop App
-                </h1>
-
-                <p class="lead mb-4">
-                    Manage your store faster and more efficiently with our powerful desktop application.
-                    Enjoy better performance, offline access, and a smoother workflow.
                 <span style="
                     display:inline-block;
                     background:rgba(241,10,222,0.1);
@@ -227,22 +216,6 @@
             <div class="col-md-6 text-center">
 
                 <div class="bg-white text-dark p-5 rounded-4 shadow-lg d-inline-block">
-
-                    <i class="fa-solid fa-download fs-1 mb-3"></i>
-
-                    <h5 class="fw-bold mb-2">
-                        Download for Windows
-                    </h5>
-
-                    <p class="text-muted small mb-4">
-                        Windows 10 & 11 supported
-                    </p>
-
-                    <a href="/downloads/bloomonie-setup.exe" 
-                       class="btn btn-dark px-4 py-2 fw-semibold" 
-                       download>
-
-                        Download
 
                 <div style="
                     background:#fff;

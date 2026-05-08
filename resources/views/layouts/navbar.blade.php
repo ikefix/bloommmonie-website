@@ -24,21 +24,14 @@
             @guest
                 @if (Route::has('login'))
                     <li class="custom-item">
-<<<<<<< HEAD
-                        <a class="custom-link login-button custom-button" href="{{ route('login') }}">{{ __('Login') }}</a>
-=======
                         <a class="custom-link login-button custom-button" href="https://bloommonie.store">Login</a>
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                     </li>
                 @endif
     
                 @if (Route::has('register'))
                     <li class="custom-item">
-<<<<<<< HEAD
-                        <a class="custom-link signup-button custom-button" href="{{ route('register') }}">{{ __('Register') }}</a>
-=======
+
                         <a class="custom-link signup-button custom-button" href="https://bloommonie.store">Register</a>
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                     </li>
                 @endif
                 @else
