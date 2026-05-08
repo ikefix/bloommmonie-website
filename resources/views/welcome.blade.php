@@ -70,19 +70,12 @@
                   <li class="custom-item">
                       <a class="custom-link login-button custom-button" 
                         href="https://bloomonie.store" target="_blank">
-<<<<<<< HEAD
-                        Visit Store
-                      </a>
-                  </li>
-
-                  <li class="custom-item">
-=======
                         Login
                       </a>
                   </li>
 
+
                   <li class="custom-item">  
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                       <a class="custom-link signup-button custom-button" 
                         href="https://bloomonie.store" target="_blank">
                         Register
@@ -95,20 +88,14 @@
         </div>        
         <div class="hero">
             <div class="hero-text">
-<<<<<<< HEAD
                 <h1> Your Cloud-Based POS System – Built for Every Store, Customer, and Location</h1>
-=======
                 <h1> Your Cloud-Based Book-Keeping – Built for Every Store, Customer, and Location</h1>
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
                     <a class="custom-button trial" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
-<<<<<<< HEAD
                     {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
-=======
                     <a class="custom-button demo" href="{{ asset('Bloommonie Setup 1.0.0.exe') }}" download><b>Download Desktop</b></a>
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 </div>
                 <small>No Credit Card Required!</small>
             </div>
@@ -190,24 +177,20 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
 <section class="py-5 text-white" style="background: linear-gradient(135deg,#2563eb,#9333ea);">
 
     <div class="container">
 
         <div class="row align-items-center g-5">
-=======
 <section class="py-5" style="background:#f9fafb;">
 
     <div class="container">
 
         <div class="row align-items-center">
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 
             <!-- LEFT -->
             <div class="col-md-6">
 
-<<<<<<< HEAD
                 <h1 class="fw-bold display-5 mb-3">
                     Download Our Desktop App
                 </h1>
@@ -215,7 +198,6 @@
                 <p class="lead mb-4">
                     Manage your store faster and more efficiently with our powerful desktop application.
                     Enjoy better performance, offline access, and a smoother workflow.
-=======
                 <span style="
                     display:inline-block;
                     background:rgba(241,10,222,0.1);
@@ -237,7 +219,6 @@
                 <p style="color:#555; font-size:17px; max-width:500px;">
                     Take full control of your business with a faster, smoother, and more reliable desktop experience.
                     No lag, no stress — just productivity.
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 </p>
 
             </div>
@@ -245,7 +226,6 @@
             <!-- RIGHT -->
             <div class="col-md-6 text-center">
 
-<<<<<<< HEAD
                 <div class="bg-white text-dark p-5 rounded-4 shadow-lg d-inline-block">
 
                     <i class="fa-solid fa-download fs-1 mb-3"></i>
@@ -264,7 +244,6 @@
 
                         Download
 
-=======
                 <div style="
                     background:#fff;
                     border-radius:20px;
@@ -308,7 +287,6 @@
                        "
                        download>
                         Download Desktop
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                     </a>
 
                 </div>
@@ -318,7 +296,6 @@
         </div>
 
     </div>
-<<<<<<< HEAD
 
 </section>
 
@@ -370,13 +347,11 @@
 
   </div>
 </section>
-=======
 </section>
 <br>
 
 
 @include('layouts.price')
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 
       <div class="calltoaction">
         <div class="cta-text">
