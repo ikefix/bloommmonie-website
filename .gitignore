@@ -2,6 +2,10 @@
 /public/build
 /public/hot
 /public/storage
+<<<<<<< HEAD
+=======
+public/bloommonie-desktop/dist/
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 /storage/*.key
 /vendor
 .env

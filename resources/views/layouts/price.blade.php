@@ -51,7 +51,11 @@
                 <li>24/7 Support</li>
             </ul>
 
+<<<<<<< HEAD
             <div style="margin-top:auto;">
+=======
+            {{-- <div style="margin-top:auto;">
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="15000000">
@@ -61,7 +65,11 @@
                         Subscribe
                     </button>
                 </form>
+<<<<<<< HEAD
             </div>
+=======
+            </div> --}}
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
         </div>
 
         <!--lite plan-->
@@ -88,7 +96,11 @@
             <li>24/7 Support</li>
         </ul>
 
+<<<<<<< HEAD
         <div style="margin-top:auto;">
+=======
+        {{-- <div style="margin-top:auto;">
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
             <form action="{{ route('paystack.checkout') }}" method="POST">
                 @csrf
                 <input type="hidden" name="amount" value="100000">
@@ -98,7 +110,11 @@
                     Subscribe
                 </button>
             </form>
+<<<<<<< HEAD
         </div>
+=======
+        </div> --}}
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
     </div>
 
         <!-- Business Plan -->
@@ -129,7 +145,11 @@
                 <li>24/7 Support</li>
             </ul>
 
+<<<<<<< HEAD
             <div style="margin-top:auto;">
+=======
+            {{-- <div style="margin-top:auto;">
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="15000000">
@@ -139,7 +159,11 @@
                         Subscribe
                     </button>
                 </form>
+<<<<<<< HEAD
             </div>
+=======
+            </div> --}}
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
         </div>
 
         <!-- Enterprise Plan -->
@@ -172,7 +196,11 @@
                 <li>24/7 Support</li>
             </ul>
 
+<<<<<<< HEAD
             <div style="margin-top:auto;">
+=======
+            {{-- <div style="margin-top:auto;">
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 <form action="{{ route('paystack.checkout') }}" method="POST">
                     @csrf
                     <input type="hidden" name="amount" value="70000000">
@@ -182,7 +210,11 @@
                         Subscribe
                     </button>
                 </form>
+<<<<<<< HEAD
             </div>
+=======
+            </div> --}}
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
         </div>
 
     </div>

@@ -70,11 +70,19 @@
                   <li class="custom-item">
                       <a class="custom-link login-button custom-button" 
                         href="https://bloomonie.store" target="_blank">
+<<<<<<< HEAD
                         Visit Store
                       </a>
                   </li>
 
                   <li class="custom-item">
+=======
+                        Login
+                      </a>
+                  </li>
+
+                  <li class="custom-item">  
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                       <a class="custom-link signup-button custom-button" 
                         href="https://bloomonie.store" target="_blank">
                         Register
@@ -87,12 +95,20 @@
         </div>        
         <div class="hero">
             <div class="hero-text">
+<<<<<<< HEAD
                 <h1> Your Cloud-Based POS System – Built for Every Store, Customer, and Location</h1>
+=======
+                <h1> Your Cloud-Based Book-Keeping – Built for Every Store, Customer, and Location</h1>
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
                     <a class="custom-button trial" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
+<<<<<<< HEAD
                     {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
+=======
+                    <a class="custom-button demo" href="{{ asset('Bloommonie Setup 1.0.0.exe') }}" download><b>Download Desktop</b></a>
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 </div>
                 <small>No Credit Card Required!</small>
             </div>
@@ -174,15 +190,24 @@
     </div>
   </div>
 </div>
+<<<<<<< HEAD
 <section class="py-5 text-white" style="background: linear-gradient(135deg,#2563eb,#9333ea);">
 
     <div class="container">
 
         <div class="row align-items-center g-5">
+=======
+<section class="py-5" style="background:#f9fafb;">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 
             <!-- LEFT -->
             <div class="col-md-6">
 
+<<<<<<< HEAD
                 <h1 class="fw-bold display-5 mb-3">
                     Download Our Desktop App
                 </h1>
@@ -190,6 +215,29 @@
                 <p class="lead mb-4">
                     Manage your store faster and more efficiently with our powerful desktop application.
                     Enjoy better performance, offline access, and a smoother workflow.
+=======
+                <span style="
+                    display:inline-block;
+                    background:rgba(241,10,222,0.1);
+                    color:#f10ade;
+                    padding:6px 14px;
+                    border-radius:50px;
+                    font-size:14px;
+                    font-weight:600;
+                    margin-bottom:15px;
+                ">
+                    Desktop App
+                </span>
+
+                <h1 class="fw-bold mb-3" style="color:#111; font-size:42px; line-height:1.2;">
+                    Work Faster With Our <br>
+                    <span style="color:#f10ade;">Desktop Application</span>
+                </h1>
+
+                <p style="color:#555; font-size:17px; max-width:500px;">
+                    Take full control of your business with a faster, smoother, and more reliable desktop experience.
+                    No lag, no stress — just productivity.
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                 </p>
 
             </div>
@@ -197,6 +245,7 @@
             <!-- RIGHT -->
             <div class="col-md-6 text-center">
 
+<<<<<<< HEAD
                 <div class="bg-white text-dark p-5 rounded-4 shadow-lg d-inline-block">
 
                     <i class="fa-solid fa-download fs-1 mb-3"></i>
@@ -215,6 +264,51 @@
 
                         Download
 
+=======
+                <div style="
+                    background:#fff;
+                    border-radius:20px;
+                    padding:50px 30px;
+                    box-shadow:0 20px 60px rgba(0,0,0,0.08);
+                    position:relative;
+                ">
+
+                    <!-- Top Accent Line -->
+                    <div style="
+                        height:4px;
+                        width:60px;
+                        background:#f10ade;
+                        border-radius:10px;
+                        margin:0 auto 25px;
+                    "></div>
+
+                    <i class="fa-solid fa-download" style="
+                        font-size:50px;
+                        color:#f10ade;
+                        margin-bottom:15px;
+                    "></i>
+
+                    <h5 class="fw-bold mb-2" style="color:#111;">
+                        Download for Windows
+                    </h5>
+
+                    <p style="color:#777; font-size:14px;" class="mb-4">
+                        Optimized for speed and offline usage
+                    </p>
+
+                    <a href="{{ asset('Bloommonie Setup 1.0.0.exe') }}"
+                       class="btn px-4 py-2 fw-semibold"
+                       style="
+                           background:#f10ade;
+                           color:#fff;
+                           border-radius:8px;
+                           box-shadow:0 10px 25px rgba(241,10,222,0.3);
+                           padding:7px 10px;
+                           text-decoration:none;
+                       "
+                       download>
+                        Download Desktop
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
                     </a>
 
                 </div>
@@ -224,6 +318,7 @@
         </div>
 
     </div>
+<<<<<<< HEAD
 
 </section>
 
@@ -275,6 +370,13 @@
 
   </div>
 </section>
+=======
+</section>
+<br>
+
+
+@include('layouts.price')
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 
       <div class="calltoaction">
         <div class="cta-text">
@@ -384,7 +486,11 @@ With Bloommonie, you don’t need to calculate sales or stock by hand again.
 </a>
 
       @include('layouts.footer')
+<<<<<<< HEAD
 <script>
+=======
+{{-- <script>
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 document.addEventListener('DOMContentLoaded', function() {
     const subscriptionForms = document.querySelectorAll('.pricing-card form');
 
@@ -402,7 +508,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+<<<<<<< HEAD
 </script>
+=======
+</script> --}}
+>>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
