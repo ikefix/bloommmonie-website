@@ -227,6 +227,55 @@
 
 </section>
 
+<section class="testimonial-section">
+  <div class="testimonial-wrapper">
+
+    <!-- LEFT: TEXT -->
+    <div class="testimonial-text">
+      <span class="badge">Trusted by Growing Businesses</span>
+      <h2>Real Businesses. Real Results.</h2>
+
+      <p class="quote">
+   Since I started using Bloommonie, managing my business has been easier. 
+  Sales records are clear, inventory is accurate, and I can see my profit anytime.
+  It’s a real game-changer for growing businesses in Nigeria.”
+      </p>
+
+      {{-- <div class="testimonial-user">
+        <img src="{{asset('images/dakl.png')}}" alt="Customer">
+        <div>
+          <h4>Omeke Peter</h4>
+          <small>Founder, Ogalearn Enterprise</small>
+        </div>
+      </div> --}}
+
+      <div class="testimonial-stats">
+        <div>
+          <h3>99%</h3>
+          <p>Reduction in Inventory Losses</p>
+        </div>
+        <div>
+          <h3>99.9%</h3>
+          <p>Stock Accuracy</p>
+        </div>
+        <div>
+          <h3>24/7</h3>
+          <p>Customer Support</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: VIDEO -->
+    <div class="testimonial-video">
+      <div class="video-frame">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9Lx23I-T1C0?si=plZiLwJlIMWSK2DK" title="Bloommonie Testimonal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Watch how Bloommonie helps businesses scale effortlessly</p>
+    </div>
+
+  </div>
+</section>
+
       <div class="calltoaction">
         <div class="cta-text">
           <h1>Let’s Get Started</h1>
