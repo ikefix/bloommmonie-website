@@ -89,7 +89,6 @@
         <div class="hero">
             <div class="hero-text">
                 <h1> Your Cloud-Based POS System – Built for Every Store, Customer, and Location</h1>
-                <h1> Your Cloud-Based Book-Keeping – Built for Every Store, Customer, and Location</h1>
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
@@ -456,11 +455,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-<<<<<<< HEAD
-</script>
-=======
-</script> --}}
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
+
+ 
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
