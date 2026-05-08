@@ -69,7 +69,7 @@
 
                   <li class="custom-item">
                       <a class="custom-link login-button custom-button" 
-                        href="https://bloomonie.store" target="_blank">
+                        href="https://bloommonie.store" target="_blank">
                         Login
                       </a>
                   </li>
@@ -77,7 +77,7 @@
 
                   <li class="custom-item">  
                       <a class="custom-link signup-button custom-button" 
-                        href="https://bloomonie.store" target="_blank">
+                        href="https://bloommonie.store" target="_blank">
                         Register
                       </a>
                   </li>
