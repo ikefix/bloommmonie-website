@@ -47,8 +47,11 @@
                 <li>1 store/location</li>
                 <li>Max Product 500</li>
                 <li>Sales Report</li>
+                <li>Profit Report</li>
                 <li>Stock Adjustment</li>
-                <li>Report Download</li>
+                <li>Receipt Printing</li>
+                <li>Expence Tracking</li>
+                <li>Discount Management</li>
                 <li>24/7 Support</li>
             </ul>
 
@@ -76,12 +79,16 @@
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>Unlimited Users</li>
-                <li>2 store/Location</li>
+                <li>1 store/Location</li>
                 <li>Unlimited Products</li>
                 <li>Sales Report</li>
+                <li>Profit Report</li>
                 <li>Report Download</li>
                 <li>Stock Adjustment</li>
+                <li>Receipt Printing</li>
                 <li>Expense Tracking</li>
+                <li>Discount Management</li>
+                <li>Barcode Support</li>
                 <li>24/7 Support</li>
             </ul>
 
@@ -113,16 +120,17 @@
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>Unlimited Users</li>
-                <li>2 store/Location</li>
+                <li>Unlimited store</li>
                 <li>Unlimited Products</li>
                 <li>Sales Report</li>
+                <li>Profit Report</li>
                 <li>Report Download</li>
                 <li>Stock Adjustment</li>
+                <li>Receipt Printing</li>
                 <li>Expense Tracking</li>
-                <li>Discount Management Support</li>
                 <li>Customer Management</li>
-                <li>Profit & Loss Statement</li>
                 <li>Barcode Support</li>
+                <li>Discount Management</li>
                 <li>24/7 Support</li>
             </ul>
 
