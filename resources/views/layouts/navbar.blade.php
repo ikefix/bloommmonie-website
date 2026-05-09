@@ -24,14 +24,14 @@
             @guest
                 @if (Route::has('login'))
                     <li class="custom-item">
-                        <a class="custom-link login-button custom-button" href="https://bloommonie.store">Login</a>
+                        <a class="custom-link login-button custom-button" href="https://bloommonie.store" target="_blank">Login</a>
                     </li>
                 @endif
     
                 @if (Route::has('register'))
                     <li class="custom-item">
 
-                        <a class="custom-link signup-button custom-button" href="https://bloommonie.store">Register</a>
+                        <a class="custom-link signup-button custom-button" href="https://bloommonie.store" target="_blank">Register</a>
                     </li>
                 @endif
                 @else

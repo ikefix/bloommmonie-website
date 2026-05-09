@@ -92,7 +92,7 @@
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
-                    <a class="custom-button trial" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
+                    <a class="custom-button trial" href="https://bloommonie.store" target="_blank">Get Started For Free</a>
                     {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
                     <a class="custom-button demo" href="{{ asset('Bloommonie Setup 1.0.0.exe') }}" download><b>Download Desktop</b></a>
                 </div>
@@ -169,7 +169,7 @@
           Fashion boutiques thrive on providing a unique experience…
         </p>
         <p>Get your free trial now and see the difference!</p>
-        <a class="businessbtn" href="{{ route('demo.signup') }}">Book a 14 Days Free Trial</a>
+        <a class="businessbtn" href="https://bloommonie.store" target="_blank">Start Free Trial</a>
       </div>
 
       <img id="businessImage" src="images/pics.jpg" alt="Fashion Boutique" />
@@ -332,7 +332,7 @@
 With Bloommonie, you don’t need to calculate sales or stock by hand again.
  Everything is automated and accurate. If you’re serious about growing your business in Nigeria, this
  software will really help you scale without wahala.</h3>
-          <a href="{{ route('demo.signup') }}"><button class="start-free">Request a Demo</button></a>
+          <a href="https://bloommonie.store" target="_blank"><button class="start-free">Get Started</button></a>
         </div>
       </div>
       <div class="faq-wrapper">

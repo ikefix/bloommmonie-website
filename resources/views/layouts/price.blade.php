@@ -40,7 +40,7 @@
             flex-direction:column;
         ">
             <h3 style="color:#f10ade;">Basic</h3>
-            <p class="price" data-ngn-month="5,250" data-ngn-year="50,250">₦50,250/yr</p>
+            <p class="price" data-ngn-month="5,000" data-ngn-year="50,000">₦50,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>1 User</li>
@@ -75,7 +75,7 @@
             flex-direction:column;
         ">
             <h3 style="color:#f10ade;">Lite</h3>
-            <p class="price" data-ngn-month="7,250" data-ngn-year="70,250">₦70,250/yr</p>
+            <p class="price" data-ngn-month="7,000" data-ngn-year="70,000">₦70,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>Unlimited Users</li>
@@ -116,7 +116,7 @@
             flex-direction:column;
         ">
             <h3 style="color:#f10ade;">Business</h3>
-            <p class="price" data-ngn-month="10,250" data-ngn-year="100,250">₦100,250/yr</p>
+            <p class="price" data-ngn-month="10,000" data-ngn-year="100,000">₦100,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
                 <li>Unlimited Users</li>
