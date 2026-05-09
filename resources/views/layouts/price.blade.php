@@ -39,7 +39,7 @@
             display:flex;
             flex-direction:column;
         ">
-            <h3 style="color:#f10ade;">Free</h3>
+            <h3 style="color:#f10ade;">Basic</h3>
             <p class="price" data-ngn-month="5,250" data-ngn-year="50,250">₦50,250/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
