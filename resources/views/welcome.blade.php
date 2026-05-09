@@ -433,11 +433,11 @@ With Bloommonie, you don’t need to calculate sales or stock by hand again.
 </a>
 
       @include('layouts.footer')
-<<<<<<< HEAD
-<script>
-=======
-{{-- <script>
->>>>>>> 30defa390ab063a8c776a1f59da27fb28980e6d6
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script>
+
 document.addEventListener('DOMContentLoaded', function() {
     const subscriptionForms = document.querySelectorAll('.pricing-card form');
 
