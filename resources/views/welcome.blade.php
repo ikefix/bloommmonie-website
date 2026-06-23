@@ -116,6 +116,10 @@
         height: 70px;
         font-size: 30px;
     }
+
+    .video-wrapper {
+    width: 100%;
+}
 }
     </style>
 
