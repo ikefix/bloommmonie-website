@@ -22,6 +22,104 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 
     </head>
+    <style>
+.video-wrapper {
+    position: relative;
+    width: 50%;
+    max-width: 700px;
+    margin: auto;
+    aspect-ratio: 16/9;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+.video-cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.video-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.video-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+/* Top Text */
+.video-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Center Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.95);
+    color: #6a11cb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    transition: all 0.3s ease;
+}
+
+.video-cover:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 22px;
+        padding: 8px 15px;
+    }
+
+    .play-button {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+}
+    </style>
+
+    
     <body class="antialiased">
         
         <div id="defaultNavbar" class="hidden-navbar">
@@ -98,9 +196,44 @@
                 </div>
                 <small>No Credit Card Required!</small>
             </div>
-            <div class="hero-image">
-                <img src="{{ url("images/digital-tablet.png") }}" alt="">
-            </div>
+            <div class="video-wrapper">
+
+    <!-- Cover Image -->
+    <div class="video-cover" id="videoCover">
+        <img src="{{ url('images/digital-tablet.png') }}" alt="How It Works">
+
+        <!-- Text Overlay -->
+        <div class="video-title">
+            How It Works - Getting Started
+        </div>
+
+        <!-- Play Button -->
+        <div class="play-button">
+            ▶
+        </div>
+    </div>
+
+    <!-- YouTube Video -->
+    <iframe
+        id="youtubeVideo"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+<script>
+document.getElementById("videoCover").addEventListener("click", function () {
+    const iframe = document.getElementById("youtubeVideo");
+
+    iframe.src = "https://www.youtube.com/embed/JlixAsMP3FI?autoplay=1";
+    iframe.style.display = "block";
+    this.style.display = "none";
+});
+</script>
         </div>
     </div>
     <div class="feature-section">
@@ -435,7 +568,17 @@ With Bloommonie, you don’t need to calculate sales or stock by hand again.
       @include('layouts.footer')
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById("videoCover").addEventListener("click", function () {
+    let iframe = document.getElementById("youtubeVideo");
 
+    // Load video only when clicked
+    iframe.src = "https://www.youtube.com/embed/JlixAsMP3FI?autoplay=1";
+
+    iframe.style.display = "block";
+    this.style.display = "none";
+});
+</script>
  <script>
 
 document.addEventListener('DOMContentLoaded', function() {
