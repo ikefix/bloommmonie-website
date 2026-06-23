@@ -77,7 +77,7 @@
 
                   <li class="custom-item">  
                       <a class="custom-link signup-button custom-button" 
-                        href="https://bloommonie.store" target="_blank">
+                        href="https://bloommonie.store/register" target="_blank">
                         Register
                       </a>
                   </li>
