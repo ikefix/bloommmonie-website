@@ -92,7 +92,7 @@
                 <p>"Track sales and inventory in real time with our cloud-based POS software. Instantly monitor stock across all locations, avoid overselling, and keep your data seamlessly synchronized.
                 </p>
                 <div class="hero-link">
-                    <a class="custom-button trial" href="https://bloommonie.store" target="_blank">Get Started For Free</a>
+                    <a class="custom-button trial" href="https://bloommonie.store/register" target="_blank">Get Started For Free</a>
                     {{-- <a class="custom-button demo" href=""><b>Book a Demo Now here</b></a> --}}
                     <a class="custom-button demo" href="{{ asset('Bloommonie Setup 1.0.0.exe') }}" download><b>Download Desktop</b></a>
                 </div>
