@@ -233,7 +233,7 @@
 document.getElementById("videoCover").addEventListener("click", function () {
     const iframe = document.getElementById("youtubeVideo");
 
-    iframe.src = "https://www.youtube.com/embed/JlixAsMP3FI?autoplay=1";
+    iframe.src = "https://youtu.be/Ql9mwIEljto?si=plZiLwJlIMWSK2DK"; // Load video only when clicked
     iframe.style.display = "block";
     this.style.display = "none";
 });
