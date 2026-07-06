@@ -218,14 +218,15 @@
     </div>
 
     <!-- YouTube Video -->
-    <iframe
+    {{-- <iframe
         id="youtubeVideo"
         src=""
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
-    </iframe>
+    </iframe> --}}
+    <iframe id="youtubeVideo" title="YouTube video player" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </div>
 
@@ -577,7 +578,7 @@ document.getElementById("videoCover").addEventListener("click", function () {
     let iframe = document.getElementById("youtubeVideo");
 
     // Load video only when clicked
-    iframe.src = "https://www.youtube.com/embed/JlixAsMP3FI?autoplay=1";
+    iframe.src = "https://www.youtube.com/embed/4aWSIBamDrc?si=ABeIMViqAZ4IgKAF?autoplay=1";
 
     iframe.style.display = "block";
     this.style.display = "none";
