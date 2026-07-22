@@ -147,7 +147,7 @@
             <!-- Logo -->
             <a class="custom-logo" href="{{ url('/') }}">
                 {{-- {{ config('app.name', 'Laravel') }} --}}
-                <img src="{{ asset('images/logo.jpeg') }}" alt="Bloommonie Logo" class="logomobile" style="height:40px;" >
+                <img src="{{ asset('images/logo.png') }}" alt="Bloommonie Logo" class="logomobile" style="height:40px;" >
             </a>
 
             {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -326,8 +326,8 @@ document.getElementById("videoCover").addEventListener("click", function () {
 
                 <span style="
                     display:inline-block;
-                    background:rgba(241,10,222,0.1);
-                    color:#f10ade;
+                    background:#316fb2;
+                    color:#fff;
                     padding:6px 14px;
                     border-radius:50px;
                     font-size:14px;
@@ -339,7 +339,7 @@ document.getElementById("videoCover").addEventListener("click", function () {
 
                 <h1 class="fw-bold mb-3" style="color:#111; font-size:42px; line-height:1.2;">
                     Work Faster With Our <br>
-                    <span style="color:#f10ade;">Desktop Application</span>
+                    <span style="color:#316fb2;">Desktop Application</span>
                 </h1>
 
                 <p style="color:#555; font-size:17px; max-width:500px;">
@@ -366,14 +366,14 @@ document.getElementById("videoCover").addEventListener("click", function () {
                     <div style="
                         height:4px;
                         width:60px;
-                        background:#f10ade;
+                        background:#316fb2;
                         border-radius:10px;
                         margin:0 auto 25px;
                     "></div>
 
                     <i class="fa-solid fa-download" style="
                         font-size:50px;
-                        color:#f10ade;
+                        color:#316fb2;
                         margin-bottom:15px;
                     "></i>
 
@@ -388,10 +388,10 @@ document.getElementById("videoCover").addEventListener("click", function () {
                     <a href="{{ asset('Bloommonie Setup 1.0.0.exe') }}"
                        class="btn px-4 py-2 fw-semibold"
                        style="
-                           background:#f10ade;
+                           background:#316fb2;
                            color:#fff;
                            border-radius:8px;
-                           box-shadow:0 10px 25px rgba(241,10,222,0.3);
+                           box-shadow:0 10px 25px #316fb2;
                            padding:7px 10px;
                            text-decoration:none;
                        "
@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "General Store",
       description:
         "BloomPOS adapts to any business — from gadgets to home items — with flexible inventory tools.",
-      image: "images/logo.jpeg"
+      image: "images/logo.png"
     }
   };
 

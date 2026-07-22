@@ -13,8 +13,8 @@ body{
 }
 
 :root {
-    --primary-blue: #f10ade;
-    --primary-blue-dark:  #f10ade;
+    --primary-blue: #316fb2;
+    --primary-blue-dark:  #316fb2;
     --accent-grey: black;
     --accent-grey-dark:black;
     --light-gray: #f8f9fa;
@@ -426,7 +426,7 @@ body{
 
 .usecase button {
     padding: 0.75rem 1.5rem;
-    background-color: #f10ade;
+    background-color: #316fb2;
     color: white;
     border: none;
     border-radius: 8px;

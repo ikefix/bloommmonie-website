@@ -16,12 +16,12 @@
     }
 </style>
 <section class="pricing-section">
-    <h2 style="text-align:center; color:#f10ade;">Choose Your Plan</h2>
+    <h2 style="text-align:center; color:#316fb2;">Choose Your Plan</h2>
 
-    <div class="billing-toggle" style="margin-bottom: 1rem; display:flex; align-items:center; justify-content:center; gap:1rem; color:#f10ade; font-weight:bold;">
+    <div class="billing-toggle" style="margin-bottom: 1rem; display:flex; align-items:center; justify-content:center; gap:1rem; color:#316fb2; font-weight:bold;">
         <label class="switch">
             <input type="checkbox" id="billingToggle" checked>
-            <span class="slider" style="background:#f10ade;"></span>
+            <span class="slider" style="background:#316fb2;"></span>
         </label>
         <span id="billingLabel">Yearly</span>
         <span>Get discount for yearly purchases!</span>
@@ -31,7 +31,7 @@
 
         <!-- Free Plan -->
         <div class="pricing-card" style="
-            border:1px solid #f10ade;
+            border:1px solid #316fb2;
             border-radius:8px;
             padding:1rem;
             width:300px;
@@ -39,7 +39,7 @@
             display:flex;
             flex-direction:column;
         ">
-            <h3 style="color:#f10ade;">Basic</h3>
+            <h3 style="color:#316fb2;">Basic</h3>
             <p class="price" data-ngn-month="5,000" data-ngn-year="50,000">₦50,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -57,7 +57,7 @@
 
             {{-- <div style="margin-top:auto;">
                 <a href="{{ route('register') }}" class="button"
-                   style="background:#f10ade; color:#fff; padding:0.5rem 1rem; border-radius:4px; display:inline-block;">
+                   style="background:#316fb2; color:#fff; padding:0.5rem 1rem; border-radius:4px; display:inline-block;">
                     Get Started
                 </a>
             </div> --}}
@@ -65,16 +65,15 @@
 
         <!-- Lite Plan -->
         <div class="pricing-card" style="
-            border:1px solid #f10ade;
+            border:1px solid #316fb2;
             border-radius:8px;
             padding:1rem;
             width:300px;
             text-align:center;
-            background:#fff0ff;
             display:flex;
             flex-direction:column;
         ">
-            <h3 style="color:#f10ade;">Lite</h3>
+            <h3 style="color:#316fb2;">Lite</h3>
             <p class="price" data-ngn-month="7,000" data-ngn-year="70,000">₦70,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -98,7 +97,7 @@
                     <input type="hidden" name="amount" value="10000000">
                     <input type="hidden" name="plan" value="lite">
                     <button type="submit" class="button"
-                        style="background:#f10ade; color:#fff; padding:0.5rem 1rem; border-radius:4px;">
+                        style="background:#316fb2; color:#fff; padding:0.5rem 1rem; border-radius:4px;">
                         Start Free Trial
                     </button>
                 </form>
@@ -107,7 +106,7 @@
 
         <!-- Business Plan -->
         <div class="pricing-card" style="
-            border:1px solid #f10ade;
+            border:1px solid #316fb2;
             border-radius:8px;
             padding:1rem;
             width:300px;
@@ -115,7 +114,7 @@
             display:flex;
             flex-direction:column;
         ">
-            <h3 style="color:#f10ade;">Business</h3>
+            <h3 style="color:#316fb2;">Business</h3>
             <p class="price" data-ngn-month="10,000" data-ngn-year="100,000">₦100,000/yr</p>
 
             <ul style="list-style:none; padding:0; margin:0.5rem 0;">
@@ -140,7 +139,7 @@
                     <input type="hidden" name="amount" value="15000000">
                     <input type="hidden" name="plan" value="business">
                     <button type="submit" class="button"
-                        style="background:#f10ade; color:#fff; padding:0.5rem 1rem; border-radius:4px;">
+                        style="background:#316fb2; color:#fff; padding:0.5rem 1rem; border-radius:4px;">
                         Contact Sales
                     </button>
                 </form>
