@@ -15,6 +15,7 @@
                 <li class="custom-item"><a class="custom-link" href="{{ url('/#business') }}">Business Types</a></li>
                 <li class="custom-item"><a class="custom-link" href="{{ url('/support') }}">24/7 Support</a></li>
                 <li class="custom-item"><a class="custom-link" href="{{ url('/pricing') }}">Pricing</a></li>
+                <li class="custom-item"><a class="custom-link" href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
                 <li class="custom-item"><a class="custom-link" href="{{ url('/features') }}">Features</a></li>
             </ul>
         </div>

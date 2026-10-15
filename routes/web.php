@@ -47,7 +47,7 @@ Route::get('/support', function () {
 
 Route::post('/register-company', [CompanyRegistrationController::class, 'store'])->name('register-company');
 
-
+Route::view('/privacy-policy', 'privacy')->name('privacy');
 
 
 // Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
